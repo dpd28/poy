@@ -1,0 +1,3 @@
+juryGender();
+orgTotals();
+freelance();
