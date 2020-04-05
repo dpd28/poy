@@ -21,15 +21,14 @@ function juryGender() { // object has curly braces, brackets are arrays
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // do stuff with data
-
-    // Loading data in d3v5
-    d3.csv("data/judgesGenderCount.csv")
-        // this is a promise load the data first aka await
-        .then(
-            // our chart goes here
-            function (data) {
-                // console.log(data);
-                // domain refers to the data itself
+	// Loading data in d3v5
+	d3.csv("data/judgesGenderCount.csv")
+		// this is a promise load the data first aka await
+		.then(
+			// our chart goes here
+			function(data) {
+				// console.log(data);
+				// domain refers to the data itself
                 // List of gender subgroups = header of the csv files = male, female, NA
 
                 var gender = data.columns.slice(1)
@@ -63,10 +62,8 @@ function juryGender() { // object has curly braces, brackets are arrays
                     .range(['#b59365', '#a1aeb7', '#000'])
 
                 //stack the data? --> stack per subgroup of gender
-                var stackedData = d3.stack().keys(gender)
-                    (data)
+                var stackedData = d3.stack().keys(gender)(data)
                 console.log(stackedData);
-
                 // Show the bars
                 svg.append("g")
                     .selectAll("g")
