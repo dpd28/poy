@@ -1,3 +1,3 @@
-juryGender();
+// juryGender();
 orgTotals();
 freelance();
