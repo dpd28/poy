@@ -18,7 +18,7 @@ var svg = d3.select("figure#genderJury")
     "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("/data/judgesGenderCount.csv", function (data) {
+d3.csv("data/judgesGenderCount.csv", function (data) {
 
   // List of subgroups = header of the csv files = soil condition here
   var subgroups = data.columns.slice(1)
@@ -66,7 +66,7 @@ d3.csv("/data/judgesGenderCount.csv", function (data) {
     .style("border-width", "1px")
     .style("border-radius", "3px")
     .style("padding", "10px")
-    .style("pointer-eventss", "none") // Tip from Erin Brown to prevent mouseover shenanigans
+    .style("pointer-events", "none") // Tip from Erin Brown to prevent mouseover shenanigans
     .style("font-size", "13px");
 
   // Three function that change the tooltip when user hover / move / leave a cell

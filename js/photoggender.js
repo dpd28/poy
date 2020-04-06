@@ -9,7 +9,7 @@ var margin = {
   height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("figure#genderPhotogs")
+var svg = d3.select("figure#genderPhotogs > svg")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -18,7 +18,7 @@ var svg = d3.select("figure#genderPhotogs")
     "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("/data/judgesGenderCount.csv", function (data) {
+d3.csv("data/photogsGenderCount.csv", function (data) {
 
   // List of subgroups = header of the csv files = soil condition here
   var subgroups = data.columns.slice(1)
@@ -39,7 +39,7 @@ d3.csv("/data/judgesGenderCount.csv", function (data) {
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 15])
+    .domain([0, 325])
     .range([height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -57,7 +57,7 @@ d3.csv("/data/judgesGenderCount.csv", function (data) {
   // ----------------
   // Create a tooltip
   // ----------------
-  var tooltip = d3.select("figure#genderPhotogs")
+  var tooltip = d3.select("figure#genderPhotogs > svg")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute") //position the tooltip container
@@ -66,7 +66,7 @@ d3.csv("/data/judgesGenderCount.csv", function (data) {
     .style("border-width", "1px")
     .style("border-radius", "3px")
     .style("padding", "10px")
-    .style("pointer-eventss", "none") // Tip from Erin Brown to prevent mouseover shenanigans
+    .style("pointer-events", "none") // Tip from Erin Brown to prevent mouseover shenanigans
     .style("font-size", "13px");
 
   // Three function that change the tooltip when user hover / move / leave a cell
