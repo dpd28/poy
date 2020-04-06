@@ -9,7 +9,7 @@ var margin = {
   height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("figure#genderJury")
+var svg = d3.select("figure#genderPhotogs")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -57,7 +57,7 @@ d3.csv("/data/judgesGenderCount.csv", function (data) {
   // ----------------
   // Create a tooltip
   // ----------------
-  var tooltip = d3.select("figure#genderJury")
+  var tooltip = d3.select("figure#genderPhotogs")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute") //position the tooltip container
