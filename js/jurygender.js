@@ -18,7 +18,7 @@ var svg = d3.select("figure#genderJury")
     "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("/data/juryGenderCountTest.csv", function (data) {
+d3.csv("/data/judgesGenderCount.csv", function (data) {
 
   // List of subgroups = header of the csv files = soil condition here
   var subgroups = data.columns.slice(1)
@@ -47,12 +47,44 @@ d3.csv("/data/juryGenderCountTest.csv", function (data) {
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
     .domain(subgroups)
-    .range(['#e41a1c', '#377eb8', '#4daf4a'])
+    .range(['#5a5e7a', '#55a2ac', '#db704c'])
 
   //stack the data? --> stack per subgroup
   var stackedData = d3.stack()
     .keys(subgroups)
     (data)
+
+  // ----------------
+  // Create a tooltip
+  // ----------------
+  var tooltip = d3.select("figure#genderJury")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid 1px #eeeeee")
+    .style("border-width", "1px")
+    .style("border-radius", "3px")
+    .style("padding", "10px")
+    .style("font-size", "13px");
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    var subgroupName = d3.select(this.parentNode).datum().key;
+    var subgroupValue = d.data[subgroupName];
+    tooltip
+        .html("Gender: " + subgroupName + "<br>" + "Value: " + subgroupValue)
+        .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    tooltip
+      .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  var mouseleave = function(d) {
+    tooltip
+      .transition()
+      .style("opacity", 0)
+  } // end for mouseover
 
   // Show the bars
   svg.append("g")
@@ -79,4 +111,8 @@ d3.csv("/data/juryGenderCountTest.csv", function (data) {
       return y(d[0]) - y(d[1]);
     })
     .attr("width", x.bandwidth())
+    // added for mouseover
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave)
 })
