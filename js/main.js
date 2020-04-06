@@ -1,3 +1,4 @@
-// juryGender();
+juryGender();
+photogGender();
 orgTotals();
 freelance();

@@ -1,3 +1,4 @@
+function photogGender() {
 // set the dimensions and margins of the graph
 var margin = {
     top: 10,
@@ -9,7 +10,7 @@ var margin = {
   height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("figure#genderPhotogs > svg")
+var svg = d3.select("figure#genderPhotogs")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -57,7 +58,7 @@ d3.csv("data/photogsGenderCount.csv", function (data) {
   // ----------------
   // Create a tooltip
   // ----------------
-  var tooltip = d3.select("figure#genderPhotogs > svg")
+  var tooltip = d3.select("figure#genderPhotogs")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute") //position the tooltip container
@@ -120,4 +121,5 @@ d3.csv("data/photogsGenderCount.csv", function (data) {
     // added for mouseover - don't need these with mouseout
       // .on("mousemove", mousemove)
 
-})
+});
+} // end photoGender function

@@ -1,6 +1,6 @@
 function orgTotals() { // object has curly braces, brackets are arrays
 
-	let dimensions = {
+	var dimensions = {
 		width: window.innerWidth * 0.9, // grab the innerwidth and use 90%
 		height: 800,
 		margin: {
@@ -18,7 +18,7 @@ function orgTotals() { // object has curly braces, brackets are arrays
 
 	// move into the scaffolding of the chart. 
 
-	let svg = d3.select( "figure#orgTotalAwards" ) // add something to the html container
+	var svg = d3.select( "figure#orgTotalAwards" ) // add something to the html container
 		.append( "svg" )
 		// .attr("width", dimensions.width) // defined earlier on the page
 		// .attr("height", dimensions.height);
@@ -59,13 +59,15 @@ function orgTotals() { // object has curly braces, brackets are arrays
 	// do stuff with data
 	// })
 
-	// Loading data in d3v5
-	d3.csv( "data/orgTopAwards.csv", rowConvertor )
+// Loading data in d3v5
+	// d3.csv( "data/orgTopAwards.csv", rowConvertor )
 		// this is a promise load the data first aka await
-		.then(
+		// .then(
 			// our chart goes here
-			function( data ) {
+			// function( data ) { //end of d3v5 loading data
 
+// Loading data in d3v4 because of issues
+d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 			// sort data
 			data.sort(function(b, a) {
 				return a.value - b.value;

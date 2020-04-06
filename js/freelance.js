@@ -1,6 +1,6 @@
 function freelance() { // object has curly braces, brackets are arrays
 
-	let dimensions = {
+	var dimensions = {
 		width: window.innerWidth * 0.9, // grab the innerwidth and use 90%
 		height: 800,
 		margin: {
@@ -57,11 +57,13 @@ function freelance() { // object has curly braces, brackets are arrays
 	};
 
 	// Loading data in d3v5
-	d3.csv( "data/freelanceNumAwards84-04.csv", rowConvertor )
+	// d3.csv( "data/freelanceNumAwards84-04.csv", rowConvertor )
 		// this is a promise of loading the data (await)
-		.then(
+		// .then(
 			// chart goes here
-			function( data ) {
+			//function( data ) { //end load data d3v5
+	// load data d3v4 due to issues with v5
+	d3.csv( "data/freelanceNumAwards84-04.csv", rowConvertor, function( data ) {
 				// console.log(data);
 				// domain refers to the data itself
 				// xScale.domain(d3.extent(data, d => d.percent)) 

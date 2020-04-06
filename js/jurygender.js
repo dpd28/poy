@@ -1,4 +1,5 @@
-// set the dimensions and margins of the graph
+function juryGender() {
+//set the dimensions and margins of the graph
 var margin = {
     top: 10,
     right: 30,
@@ -33,7 +34,7 @@ d3.csv("data/judgesGenderCount.csv", function (data) {
     .domain(groups)
     .range([0, width])
     .padding([0.2])
-  svg.append("g")
+    svg.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).tickSizeOuter(0));
 
@@ -41,7 +42,7 @@ d3.csv("data/judgesGenderCount.csv", function (data) {
   var y = d3.scaleLinear()
     .domain([0, 15])
     .range([height, 0]);
-  svg.append("g")
+    svg.append("g")
     .call(d3.axisLeft(y));
 
   // color palette = one color per subgroup
@@ -120,4 +121,5 @@ d3.csv("data/judgesGenderCount.csv", function (data) {
     // added for mouseover - don't need these with mouseout
       // .on("mousemove", mousemove)
 
-})
+});
+} // end juryGender function
