@@ -77,7 +77,7 @@ d3.csv("data/judgesGenderCount.csv", function (data) {
     tooltip.style("opacity", 1)
       .style("left", (d3.event.pageX+20) + "px")
       .style("top", (d3.event.pageY-10) + "px")
-        .html("Gender: " + subgroupName + "<br>" + "Value: " + subgroupValue)
+        .html("Gender: " + subgroupName + "<br>" + "Number: " + subgroupValue)
         console.log("x: "+d3.mouse(this)[0]+" and y: "+d3.mouse(this)[1]); // check position of cursor
   }
   // var mousemove = function(d) {

@@ -40,7 +40,7 @@ d3.csv("data/photogsGenderCount.csv", function (data) {
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 325])
+    .domain([0,400])
     .range([height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -48,7 +48,7 @@ d3.csv("data/photogsGenderCount.csv", function (data) {
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
     .domain(subgroups)
-    .range(['#5a5e7a', '#55a2ac', '#db704c'])
+    .range(['#5a5e7a', '#f5cf53', '#6a8f8f'])
 
   //stack the data? --> stack per subgroup
   var stackedData = d3.stack()
@@ -77,7 +77,7 @@ d3.csv("data/photogsGenderCount.csv", function (data) {
     tooltip.style("opacity", 1)
       .style("left", (d3.event.pageX+20) + "px")
       .style("top", (d3.event.pageY-10) + "px")
-        .html("Gender: " + subgroupName + "<br>" + "Value: " + subgroupValue)
+        .html("Gender: " + subgroupName + "<br>" + "Number: " + subgroupValue)
         console.log("x: "+d3.mouse(this)[0]+" and y: "+d3.mouse(this)[1]); // check position of cursor
   }
   // var mousemove = function(d) {
