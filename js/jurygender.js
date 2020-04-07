@@ -48,7 +48,7 @@ d3.csv("data/judgesGenderCount.csv", function (data) {
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
     .domain(subgroups)
-    .range(['#5a5e7a', '#55a2ac', '#db704c'])
+    .range(['#e57945', '#7859a0', '#d1d64d'])
 
   //stack the data? --> stack per subgroup
   var stackedData = d3.stack()

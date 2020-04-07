@@ -6,6 +6,7 @@ COLORS
  #BFBFBF - grey
  #B9AAB6 - lavendar
  #f5cf53 - Yellow
+ fffd77 - chartreuse
 
  FONTS
  font-family: 'Cairo', sans-serif;
@@ -32,55 +33,7 @@ body {
     font-style: normal;
     font-size: 1.25em;
     border: 24px solid #000;
-    background: #F5F2F0;
-}
-
-#wrapper {
-    width: 1152px;
-}
-
-#wrapper {
-    margin: auto;
-}
-
-section#header {
-    background-color: black;
-    width: 100%;
-    height: 50%;
-    margin-top: 0;
-
-}
-
-section#header h1 {
-    text-transform: uppercase;
-    font-size: 5em;
-    text-align: center;
-    vertical-align: center;
-    color: #F5F2F0;
-    margin-top: 0;
-    margin-bottom: 0;
-
-}
-
-section#header h2,
-section#header p.byline {
-    text-align: center;
-    color: #999999;
-}
-
-section {
-    margin: 1rem 0 1rem 0;
-}
-
-p.byline {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-div.text {
-    width: 722px;
-    margin: auto;
-    padding: 2.5rem 2.5rem;
+    background: rgb(255, 255, 255);
 }
 
 h1,
@@ -100,9 +53,133 @@ h2 {
     font-size: 1.5em;
 }
 
-/* increase the size of the labels on the axis */
-.axis_text {
-    font-size: 1rem;
+#wrapper {
+    width: 1152px;
+}
+
+#wrapper {
+    margin: auto;
+}
+
+/* ----------------
+STYLE THE HEADER
+------------------------------------------ */
+
+/* section#header {
+    background-color: black;
+    width: 100%;
+    height: 50%;
+    margin-top: 0;
+} */
+
+/* section#header #introText {
+    width: 80%;
+    margin: auto;
+} */
+
+/* The hero image */
+section#header {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/poyheader.png");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+section#header #introText {
+    text-align: center;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    /* transform: translate(20%, 20%); */
+    color: white;
+}
+
+section#header h1 {
+    text-transform: uppercase;
+    font-size: 5em;
+    text-align: center;
+    vertical-align: center;
+    color: #F5F2F0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+section#header h2,
+section#header p.byline {
+    text-align: center;
+    color: #999999;
+}
+
+section#header h2 {
+    font-family: skolar-sans-latin, sans-serif;
+    font-size: 1.5rem;
+    text-transform: none;
+}
+
+/* ----------------
+STYLE THE SECTIONS
+------------------------------------------ */
+
+section#intro {
+    margin-bottom: 2.5rem;
+}
+
+section.chapter {
+    margin-top: 3rem;
+}
+
+/* section.chapter:before {
+    background-image: url("/images/1x/male.png");
+    content: "";
+    display: block;
+    height: 50px;
+    pointer-events: none;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    width: 25%;
+} */
+
+svg#gendericns {
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------
+TEXT SECTIONS + STYLES
+------------------------------------------ */
+
+p.byline {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+div.text {
+    width: 722px;
+    margin: auto;
+    padding: 1rem 2.5rem;
+}
+
+/* ----------------
+CHART SECTIONS
+------------------------------------------ */
+
+div.chart {
+    padding: 1rem 0 2.5rem 0;
 }
 
 figure h3 {
@@ -114,6 +191,17 @@ figure p.note {
     color: #666;
 }
 
+/* ----------------
+CHART STYLES
+------------------------------------------ */
+/* increase the size of the labels on the axis */
+.axis_text {
+    font-size: 1rem;
+}
+
+/* ----------------
+FOOTER + METHODOLOGY SECTIONS
+------------------------------------------ */
 footer {
     border-top: 1px solid #000;
     padding: 1rem 0 1rem 0;

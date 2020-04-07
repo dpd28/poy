@@ -1,3 +1,4 @@
+juryInfluence();
 juryGender();
 photogGender();
 orgTotals();

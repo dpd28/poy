@@ -16,14 +16,18 @@
 
 <body>
 	<section id="header">
-		<h1>Reframing Photographs</h1>
-		<h2>What does a closer look at twenty years of the Pictures of the Year competition reveal?</h2>
-		<p class="byline">by Deb Pang Davis</p>
+		<div id="introText">
+			<h1>Reframing Photographs</h1>
+			<h2>What does a closer look at twenty years of the Pictures of the Year competition reveal about gender?
+			</h2>
+			<p class="byline">by Deb Pang Davis</p>
+		</div>
 	</section>
 	<div id="wrapper">
-		<section>
+		<section id="intro">
 			<div class="text">
-				<p><strong>INTRO</strong>. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis
+				<p><strong>INTRO</strong>. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id
+					ligula porta felis
 					euismod
 					semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac
 					cursus
@@ -34,10 +38,57 @@
 					blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
 			</div>
 		</section>
-		<section>
+		<!--<section>
+				<div class="text">
+					<h2>Most Influential Judges - This section no longer makes sense</h2>
+					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id
+						ligula porta felis
+						euismod
+						semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac
+						cursus
+						commodo,
+						tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget
+						risus
+						varius
+						blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
+				</div>
+				<figure id="juryInfluence"></figure>
+			</section> -->
+		<!-- <section>
+				<h2 style="text-align:center;">placeholder - not sure this is the right visual -</h2>
+				<img src="images/Jurors-MostInfluential-Gender-Sunburst.png" title="PLACEHOLDER" width="700px"
+					style="display:block; margin:auto;" />
+			</section> -->
+		<svg id="gendericns" data-name="gender" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.12 89.79">
+			<defs>
+				<style>
+					.cls-1 {
+						fill: #b7b8bd;
+					}
+
+					.cls-2,
+					.cls-3 {
+						fill: none;
+						stroke: #b7b8bd;
+						stroke-miterlimit: 8.51;
+						stroke-width: 8.51px;
+					}
+
+					.cls-3 {
+						stroke-linecap: round;
+					}
+				</style>
+			</defs>
+			<path class="cls-1"
+				d="M93.93,91.29A28.78,28.78,0,0,0,122.7,62.61a29.2,29.2,0,0,0-6-17.71l20.41-20.42V37.34a3.6,3.6,0,1,0,7.19,0V15.76a3.59,3.59,0,0,0-3.59-3.59H119.11a3.6,3.6,0,1,0,0,7.19H132l-20.42,20.5A28.77,28.77,0,1,0,76.22,85.27,29.29,29.29,0,0,0,93.93,91.29Zm0-50.35A21.58,21.58,0,1,1,72.35,62.52,21.53,21.53,0,0,1,93.93,40.94Z"
+				transform="translate(-6.16 -4.06)" />
+			<circle class="cls-2" cx="29.75" cy="29.75" r="25.49" />
+			<path class="cls-3" d="M35.91,61.17V89.59" transform="translate(-6.16 -4.06)" />
+			<path class="cls-3" d="M23.65,77H48.26" transform="translate(-6.16 -4.06)" />
+		</svg>
+		<section class="chapter">
 			<div class="text">
 				<h2>A Look at Gender</h2>
-				<p>Most Influential Judges</p>
 				<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id
 					ligula porta felis
 					euismod
@@ -49,63 +100,129 @@
 					varius
 					blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
 			</div>
-			<figure id="genderJury">
-				<h3>Gender Breakdown of the Pictures of the Year Judges</h3>
-				<p>Number of women versus men. Mouseover to view totals and percentages (coming soon).</p>
-			</figure>
+			<div class="chart">
+				<figure id="genderJury">
+					<h3>Gender Breakdown of the Pictures of the Year Judges</h3>
+					<p>Number of women versus men. Mouseover to view totals and percentages (coming soon).</p>
+				</figure>
+			</div><!-- end chart -->
+			<div class="chart">
+				<figure id="genderPhotogs">
+					<h3>Gender Breakdown of Photographers who won a Pictures of the Year award</h3>
+					<p>Number of women versus men. Mouseover to view total awards per year and percentages (coming
+						soon).
+					</p>
+				</figure>
+			</div><!-- end chart-->
 		</section>
-		<section>
+		<svg id="gendericns" data-name="gender" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.12 89.79">
+			<defs>
+				<style>
+					.cls-1 {
+						fill: #b7b8bd;
+					}
+
+					.cls-2,
+					.cls-3 {
+						fill: none;
+						stroke: #b7b8bd;
+						stroke-miterlimit: 8.51;
+						stroke-width: 8.51px;
+					}
+
+					.cls-3 {
+						stroke-linecap: round;
+					}
+				</style>
+			</defs>
+			<path class="cls-1"
+				d="M93.93,91.29A28.78,28.78,0,0,0,122.7,62.61a29.2,29.2,0,0,0-6-17.71l20.41-20.42V37.34a3.6,3.6,0,1,0,7.19,0V15.76a3.59,3.59,0,0,0-3.59-3.59H119.11a3.6,3.6,0,1,0,0,7.19H132l-20.42,20.5A28.77,28.77,0,1,0,76.22,85.27,29.29,29.29,0,0,0,93.93,91.29Zm0-50.35A21.58,21.58,0,1,1,72.35,62.52,21.53,21.53,0,0,1,93.93,40.94Z"
+				transform="translate(-6.16 -4.06)" />
+			<circle class="cls-2" cx="29.75" cy="29.75" r="25.49" />
+			<path class="cls-3" d="M35.91,61.17V89.59" transform="translate(-6.16 -4.06)" />
+			<path class="cls-3" d="M23.65,77H48.26" transform="translate(-6.16 -4.06)" />
+		</svg>
+		<section class="chapter">
 			<div class="text">
-				<h2>Most Influential Judges</h2>
-				<p>Hmm</p>
-				<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id
-					ligula porta felis
-					euismod
-					semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac
-					cursus
-					commodo,
-					tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget
-					risus
-					varius
-					blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
-			</div>
-			<h2>placeholder - not sure this is the right visual -</h2>
-			<img src="/images/Jurors-MostInfluential-Gender-Sunburst.png" title="PLACEHOLDER" />
-			<figure id="genderPhotogs">
-				<h3>Gender Breakdown of Photographers who won a Pictures of the Year award</h3>
-				<p>Number of women versus men. Mouseover to view total awards per year and percentages (coming soon).
-				</p>
-			</figure>
-		</section>
-		<section>
-			<div class="text">
-				<h2>A Headline Here</h2>
+				<h2>Award winning Organizations</h2>
 				<p>A total of 3,810 awards were given between 1984 and 2004. <em>National Geographic</em>, <em>The
-						Washington Post</em>, and The Associated Press were the top three award-winning organizations.
+						Washington Post</em>, and The Associated Press were the top three award-winning
+					organizations.
 				</p>
 			</div>
-			<figure id="orgTotalAwards">
-				<h3>Top 25 Award-winning Organizations</h3>
-			</figure>
+			<div class="chart">
+				<figure id="orgTotalAwards">
+					<h3>Top 25 Award-winning Organizations</h3>
+				</figure>
+			</div><!-- end chart -->
 		</section>
 		<section>
 			<div class="text">
 				<h2>Freelance Photographers</h2>
-				<p>Between 1984 and 2004, freelance photographers won the most awards. Not suprisingly, this number has
-					increased since the beginning of the competition as full-time jobs (newspapers a primary employer)
-					for photographers have decreased
+				<p>Between 1984 and 2004, a total of 478 freelance photographers won the most awards. Not
+					suprisingly,
+					this number has
+					increased since the beginning of the competition as full-time jobs for photographers have
+					decreased
 					dramatically over the years.</p>
 			</div>
-			<figure id="freelance">
-				<h3>Percentage of freelance photographers who won awards from 1984 to 2004.</h3>
-				<p class="note">The percentages included here were derived from how POY entered the data.
-					<em>Freelance</em> for this chart does not include agencies and organizations known to hire
-					freelance photographers.</p>
-			</figure>
+			<div class="chart">
+				<figure id="freelance">
+					<h3>Percentage of freelance photographers who won awards from 1984 to 2004.</h3>
+					<p class="note">The percentages included here were derived from how POY entered the data.
+						<em>Freelance</em> for this chart does not include agencies and organizations known to hire
+						freelance photographers.</p>
+				</figure>
+			</div><!-- end chart -->
+		</section>
+		<!-- <section>
+				<h3>Small Multiples of Waffle Charts?</h3>
+				<figure id="freelanceWaffle"></figure>
+			</section> -->
+		<svg id="gendericns" data-name="gender" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.12 89.79">
+			<defs>
+				<style>
+					.cls-1 {
+						fill: #b7b8bd;
+					}
+
+					.cls-2,
+					.cls-3 {
+						fill: none;
+						stroke: #b7b8bd;
+						stroke-miterlimit: 8.51;
+						stroke-width: 8.51px;
+					}
+
+					.cls-3 {
+						stroke-linecap: round;
+					}
+				</style>
+			</defs>
+			<path class="cls-1"
+				d="M93.93,91.29A28.78,28.78,0,0,0,122.7,62.61a29.2,29.2,0,0,0-6-17.71l20.41-20.42V37.34a3.6,3.6,0,1,0,7.19,0V15.76a3.59,3.59,0,0,0-3.59-3.59H119.11a3.6,3.6,0,1,0,0,7.19H132l-20.42,20.5A28.77,28.77,0,1,0,76.22,85.27,29.29,29.29,0,0,0,93.93,91.29Zm0-50.35A21.58,21.58,0,1,1,72.35,62.52,21.53,21.53,0,0,1,93.93,40.94Z"
+				transform="translate(-6.16 -4.06)" />
+			<circle class="cls-2" cx="29.75" cy="29.75" r="25.49" />
+			<path class="cls-3" d="M35.91,61.17V89.59" transform="translate(-6.16 -4.06)" />
+			<path class="cls-3" d="M23.65,77H48.26" transform="translate(-6.16 -4.06)" />
+		</svg>
+		<section class="chapter">
+			<div class="text">
+				<h2>Gender Representation / Award Winning Organizations</h2>
+				<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis
+					euismod
+					semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac
+					cursus
+					commodo,
+					tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget
+					risus
+					varius
+					blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
+			</div>
 		</section>
 		<section>
 			<div class="text">
-				<h2>A Headline Here</h2>
+				<h2>Conclusion</h2>
 				<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis
 					euismod
 					semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac
@@ -130,12 +247,14 @@
 	</div>
 	<!--end wrapper-->
 	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="js/juryinfluence.js"></script>
 	<script src="js/jurygender.js"></script>
 	<script src="js/photoggender.js"></script>
 	<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
 	<!-- <script src="js/gender-jury.js"></script> -->
 	<script src="js/awards-org-totals.js"></script>
 	<script src="js/freelance.js"></script>
+	<!-- <script src="js/freelanceWaffle.js"></script> -->
 	<script src="js/main.js"></script>
 </body>
 

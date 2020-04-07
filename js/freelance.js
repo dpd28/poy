@@ -94,9 +94,9 @@ function freelance() { // object has curly braces, brackets are arrays
 					// set the y position of the center
 					.attr( "cy", d => yScale( d.year ) )
 					.attr( "cx", d => xScale( d.percent ) )
-					.attr( "r", 4 )
+					.attr( "r", 7 )
 					// .attr("height", yScale.bandwidth())
-					.attr( "fill", "#b59365" );
+					.attr( "fill", "#d42b21" );
 
 				// line svg2 has 4 values x1 x2 y1 y2
 
