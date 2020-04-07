@@ -80,13 +80,14 @@ STYLE THE HEADER
 /* The hero image */
 section#header {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/poyheader.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/poyheader.png");
 
     /* Set a specific height */
-    height: 100%;
+    height: 75vh;
+    width: 100vw;
 
     /* Position and center the image to scale nicely on all screens */
-    background-position: top;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -94,12 +95,14 @@ section#header {
 
 /* Place text in the middle of the image */
 section#header #introText {
+    width: 70%;
     text-align: center;
     position: relative;
     top: 0%;
     left: 0%;
-    /* transform: translate(20%, 20%); */
+    transform: translate(18%, 90%);
     color: white;
+    /* margin: auto; */
 }
 
 section#header h1 {
@@ -135,9 +138,10 @@ section.chapter {
     margin-top: 3rem;
 }
 
-/* section.chapter:before {
-    background-image: url("/images/1x/male.png");
-    content: "";
+/* 
+section.chapter:before {
+    /* background-image: url("/images/1x/male.png");
+    content: "--";
     display: block;
     height: 50px;
     pointer-events: none;
