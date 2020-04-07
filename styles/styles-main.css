@@ -110,14 +110,12 @@ section#header h1 {
     color: #F5F2F0;
     margin-top: 0;
     margin-bottom: 0;
-
 }
 
-section#header h2,
+/* section#header h2,
 section#header p.byline {
     text-align: center;
-    color: #999999;
-}
+} */
 
 section#header h2 {
     font-family: skolar-sans-latin, sans-serif;
