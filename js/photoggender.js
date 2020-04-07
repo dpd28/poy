@@ -53,7 +53,8 @@ d3.csv("data/photogsGenderCount.csv", function (data) {
     // .range(['#5a5e7a', '#db704c', '#98bdd7'])    
     // .range(['#333333', '#db704c', '#98bdd7'])   
     // .range(['#e57945', '#624c99', '#d1d64d'])        
-    .range(['#d42b21', '#f4ba3b', '#7CB46D'])        
+    // .range(['#d42b21', '#f4ba3b', '#7CB46D'])     
+    .range(['#e57945', '#7859a0', '#d1d64d'])          
   //stack the data? --> stack per subgroup
   var stackedData = d3.stack()
     .keys(subgroups)

@@ -90,7 +90,7 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 					.attr( "y", d => yScale( d.organization ) ) // set the position of the rectangle and match category names
 					.attr( "width", d => xScale( d.value ) )
 					.attr( "height", yScale.bandwidth() )
-					.attr( "fill", "#d42b21" );
+					.attr( "fill", "#e57945" );
 
 				var xAxis = svg.append( "g" )
 					.attr( "class", "x_axis" )

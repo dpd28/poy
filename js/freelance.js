@@ -96,7 +96,7 @@ function freelance() { // object has curly braces, brackets are arrays
 					.attr( "cx", d => xScale( d.percent ) )
 					.attr( "r", 7 )
 					// .attr("height", yScale.bandwidth())
-					.attr( "fill", "#d42b21" );
+					.attr( "fill", "#e57945" );
 
 				// line svg2 has 4 values x1 x2 y1 y2
 
