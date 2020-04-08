@@ -1,3 +1,5 @@
+// Attempt to create a wafffle chart
+
 function freewaffle() {
 var margin = {
     top: 10,
