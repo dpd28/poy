@@ -217,6 +217,13 @@ CHART STYLES
     font-size: 1rem;
 }
 
+.xlabel,
+.ylabel {
+    font-size: 0.725rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* ----------------
 FOOTER + METHODOLOGY SECTIONS
 ------------------------------------------ */

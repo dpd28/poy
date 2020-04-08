@@ -1,6 +1,6 @@
 function femaleScatter() {
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
+var margin = {top: 10, right: 30, bottom: 60, left: 60},
     width = 1072 - margin.left - margin.right,
     height = 450 - margin.top - margin.bottom;
 
@@ -28,12 +28,31 @@ var years = d3.map(data, function (d) {
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x));
 
+  // text label for the x axis
+    svg.append("text")             
+    .attr("transform",
+        "translate(" + (width/2) + " ," + 
+                       (height + margin.top + 45) + ")")
+    .attr("class", "xlabel")
+    .style("text-anchor", "middle")
+    .text("Competition Years");
+
   // Add Y axis
   var y = d3.scaleLinear()
     .domain([0, 1.00])
     .range([ height, 0]);
     svg.append("g")
     .call(d3.axisLeft(y));
+  
+    // text label for the y axis
+    svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x",0 - (height / 2))
+    .attr("dy", "1em")
+    .attr("class", "ylabel")
+    .style("text-anchor", "middle")
+    .text("Percent of Female Jurors");    
 
     // Add a scale for bubble size
     var size = d3.scaleLinear()
@@ -41,8 +60,8 @@ var years = d3.map(data, function (d) {
       .range([ 5, 50])  // Size in pixel
 
     var opacity = d3.scaleLinear()
-      .domain([0, 1])
-      .range([1, 0])
+      .domain([0, 1]) // What's in the data
+      .range([1, 0]) // Opacity
 
   // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
   // Its opacity is set to 0: we don't see it by default.
@@ -105,7 +124,7 @@ var years = d3.map(data, function (d) {
       .attr("cx", function (d) { return x(d.year); } )
       .attr("cy", function (d) { return y(d.juror); } )
       .attr("r", function(d){ return size(d.winner); })
-      .style("fill", "#e57945") //  I like this color #69b3a2
+      .style("fill", "#7859a0") //  I like this color #69b3a2 orange e57945 green d1d64d
       .style("fill-opacity", function(d){ return opacity(d.winner); })
       .style("stroke", "white")
       .on("mouseover", mouseover)
