@@ -83,7 +83,7 @@ STYLE THE HEADER
 /* The hero image */
 section#header {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/poyheader.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://github.com/dpd28/poy/blob/master/images/poyheader.png");
 
     /* Set a specific height */
     height: 80vh;
