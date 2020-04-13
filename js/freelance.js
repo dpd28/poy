@@ -36,6 +36,8 @@ function freelance() { // object has curly braces, brackets are arrays
 		// range is the spread of pixels 0 to boundedWidth
 		.range( [ 0, dimensions.boundedWidth ] );
 
+	var xAxisGenerator = d3.axisBottom(xScale);
+
 	var yScale = d3.scaleBand()
 		.range( [ 0, dimensions.boundedHeight ] )
 		.padding( 1 );
@@ -84,7 +86,7 @@ function freelance() { // object has curly braces, brackets are arrays
 					.attr( "y1", d => yScale( d.year ) + 0.5 )
 					.attr( "y2", d => yScale( d.year ) + 0.5 )
 					.attr( "stroke-width", 0.95 )
-					.attr( "stroke", "#797979" );
+					.attr( "stroke", "#eeeeee" );
 
 				var candy = freelance.selectAll( "circle" )
 					// join the selection of rectangles with data and then modify
@@ -96,26 +98,38 @@ function freelance() { // object has curly braces, brackets are arrays
 					.attr( "cx", d => xScale( d.percent ) )
 					.attr( "r", 7 )
 					// .attr("height", yScale.bandwidth())
-					.attr( "fill", "#e57945" );
+					.attr( "fill", "#46acaa" );
+
+					// NOT SURE WHY THIS ISN'T WORKING
+				// var gridlines = d3.axisBottom()
+                //     .tickFormat("")
+                //     .tickSize(-height)
+                //     .scale(xScale);
 
 				// line svg2 has 4 values x1 x2 y1 y2
+
+				xAxisGenerator.tickSize(-200); // IS THIS WORKING?
 
 				var xAxis = freelance.append( "g" )
 					.attr( "class", "x-axis" )
 					.call( d3.axisBottom( xScale ) )
-					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` );
+					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` )
+					.call(g => g.select(".domain").remove())// removes the line for axis
+					// .call(g => g.select(gridlines));
+				
 
 				var xAxisText = xAxis.selectAll( "text" )
 					.attr( "class", "axis_text" )
-					.style( "fill", "#797979" )
+					.style( "fill", "#eee" )
 
 				var yAxis = freelance.append( "g" )
 					.attr( "class", "y-axis" )
 					.call( d3.axisLeft( yScale ) )
+					.call(g => g.select(".domain").remove()); // removes the line for axis
 
 				var yAxisText = yAxis.selectAll( "text" )
 					.attr( "class", "axis_text" )
-					.style( "fill", "#797979" );
+					.style( "fill", "#eee" );
 			}
 		);
 }

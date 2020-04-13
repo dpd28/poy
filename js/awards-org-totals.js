@@ -90,22 +90,27 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 					.attr( "y", d => yScale( d.organization ) ) // set the position of the rectangle and match category names
 					.attr( "width", d => xScale( d.value ) )
 					.attr( "height", yScale.bandwidth() )
-					.attr( "fill", "#e57945" );
+					.attr( "fill", "#46acaa" );
 
 				var xAxis = svg.append( "g" )
 					.attr( "class", "x_axis" )
 					.call( d3.axisBottom( xScale ) )
-					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` );
+					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` )
+					.call(g => g.select(".domain").remove()); // removes the line for axis
 
 				var xAxisText = xAxis.selectAll( "text" )
 					.attr( "class", "axis_text" )
+					.style( "fill", "#eee" );
 
 				var yAxis = svg.append( "g" )
 					.attr( "class", "y_axis" )
 					.call( d3.axisLeft( yScale ) )
+					.call(g => g.select(".domain").remove()); // removes the line for axis
 
 				var yAxisText = yAxis.selectAll( "text" )
-					.attr( "class", "axis_text" );
+					.attr( "class", "axis_text" )
+					.style( "fill", "#eee" );
+
 			}
 		);
 }
