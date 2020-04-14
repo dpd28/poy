@@ -91,6 +91,8 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 					.attr( "width", d => xScale( d.value ) )
 					.attr( "height", yScale.bandwidth() )
 					.attr( "fill", "#46acaa" );
+					//.attr( "fill", "#bee4f7");
+					// .attr( "fill", "#72ccbf" );
 
 				var xAxis = svg.append( "g" )
 					.attr( "class", "x_axis" )
