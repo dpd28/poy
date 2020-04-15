@@ -1,5 +1,7 @@
 juryInfluence();
-juryLineGender()
+juryLineGender();
+// juryArea();
+juryStack();
 // photogGender();
 femaleScatter();
 orgTotals();

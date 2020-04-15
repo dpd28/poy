@@ -5,7 +5,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("figure#genderJury")
+var svg = d3.select("figure#genderJuryLine")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -16,13 +16,13 @@ var svg = d3.select("figure#genderJury")
 //Read the data
 d3.csv("data/judgesGenderLine.csv", function(data) {
 
-  // group the data: I want to draw one line per group
+  // group the data: Draw one line per group
   var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
     .key(function(d) {return d.name;})
     .entries(data);
-    // console.log(sumstat);
+    console.log(sumstat); // categories are nested and works
 
-  // Add X axis --> it is a date format
+  // Add X axis 
   var x = d3.scaleBand()
     .domain(d3.extent(data, function(d) { return d.year; }))
     .range([ 0, width ]);
@@ -33,7 +33,7 @@ d3.csv("data/judgesGenderLine.csv", function(data) {
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, d3.max(data, function(d) { return +d.n; })])
+    .domain([0, d3.max(data, function(d) { return +d.count; })])
     .range([ height, 0 ]);
     svg.append("g")
     .attr( "class", "y_axis" )
@@ -56,7 +56,7 @@ d3.csv("data/judgesGenderLine.csv", function(data) {
         .attr("d", function(d){
           return d3.line()
             .x(function(d) { return x(d.year); })
-            .y(function(d) { return y(+d.n); })
+            .y(function(d) { return y(+d.count); })
             (d.values)
         });
 
