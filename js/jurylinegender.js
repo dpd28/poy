@@ -23,7 +23,7 @@ d3.csv("data/judgesGenderLine.csv", function(data) {
     console.log(sumstat); // categories are nested and works
 
   // Add X axis 
-  var x = d3.scaleBand()
+  var x = d3.scaleLinear()
     .domain(d3.extent(data, function(d) { return d.year; }))
     .range([ 0, width ]);
     svg.append("g")
