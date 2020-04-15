@@ -327,25 +327,25 @@ figure .y_axis {
 
 .x_axis text,
 .y_axis text {
-    fill: white;
+    fill: #eee;
 }
 
 .x_axis line,
 .y_axis line {
-    stroke: white;
+    stroke: #eee;
 }
 
 .x_axis path,
 .y_axis path {
-    stroke: white;
+    stroke: #eee;
 }
-
 
 .xlabel,
 .ylabel {
     font-size: 0.725rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #eee;
 }
 
 /* ----------------

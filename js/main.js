@@ -1,6 +1,6 @@
 juryInfluence();
-juryGender();
-photogGender();
+juryLineGender()
+// photogGender();
 femaleScatter();
 orgTotals();
 freelance();
