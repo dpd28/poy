@@ -90,7 +90,8 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 					.attr( "y", d => yScale( d.organization ) ) // set the position of the rectangle and match category names
 					.attr( "width", d => xScale( d.value ) )
 					.attr( "height", yScale.bandwidth() )
-					.attr( "fill", "#46acaa" );
+					//.attr( "fill", "#46acaa" );
+					.attr( "fill", "#94DAD6" );
 					//.attr( "fill", "#bee4f7");
 					// .attr( "fill", "#72ccbf" );
 

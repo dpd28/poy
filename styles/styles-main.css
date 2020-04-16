@@ -41,7 +41,10 @@ body {
     border-top: 24px solid #000;
     /* background: rgb(255, 255, 255); */
     /* background: rgb(33, 33, 33); */
-    background: rgb(72, 72, 72);
+    /* background: rgb(72, 72, 72); */
+    background: rgb(68, 68, 68);
+    /*  background: rgb(170, 167, 165); -- nice grey */
+
 }
 
 h1,
@@ -334,12 +337,14 @@ figure .y_axis {
 .x_axis line,
 .y_axis line {
     stroke: #eee;
+    opacity: 0.2;
 }
 
 .x_axis path,
 .y_axis path {
     stroke: #eee;
 }
+
 
 .xlabel,
 .ylabel {
@@ -348,6 +353,16 @@ figure .y_axis {
     letter-spacing: 1px;
     color: #eee;
 }
+
+/* .grid line {
+    stroke: lightgrey;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    stroke-width: 0;
+} */
 
 /* ----------------
 FOOTER + METHODOLOGY SECTIONS
