@@ -26,6 +26,10 @@ font-style: normal;
 font-family: droid-sans-mono,monospace;
 font-weight: 400;
 font-style: normal;
+
+    font-family: adobe-handwriting-tiffany, sans-serif;
+    font-weight: 400;
+    font-style: normal;
  */
 
 
@@ -57,16 +61,24 @@ h5 {
     font-style: normal;
     margin: 0;
     line-height: 1.3;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 1.8em;
-    text-align: center;
+    font-size: 2rem;
 }
+
+
+h3 {
+    font-size: 1.5rem;
+}
+
 
 #wrapper {
     width: 1152px;
     margin: auto;
+    display: grid;
 }
 
 /* ----------------
@@ -149,6 +161,7 @@ section#intro {
 }
 
 section.chapter {
+    grid-template-columns: 1fr;
     margin-top: 3rem;
 }
 
@@ -224,12 +237,8 @@ div.quote p {
 }
 
 div.quote p span {
-    color: #46acaa;
-
-
+    color: #94DAD6;
 }
-
-
 
 div.quote p.attribution {
     text-transform: none;
@@ -240,6 +249,35 @@ div.quote p.attribution {
     font-family: ff-real-text-pro, sans-serif;
     font-weight: 200;
     font-style: normal;
+}
+
+/* --------
+Style the Image Captions
+---- */
+section#gallery .galItem1 figcaption,
+section#gallery .galItem2 figcaption {
+    font-family: adobe-handwriting-tiffany, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+section#gallery .galItem1 figcaption {
+    position: absolute;
+    top: 300px;
+    left: -120px;
+    bottom: 40px;
+    right: 100px;
+    width: 175px;
+}
+
+section#gallery .galItem2 figcaption {
+    position: absolute;
+    top: 300px;
+    left: 1175px;
+    bottom: 40px;
+    right: 0px;
+    width: 175px;
 }
 
 p.disclaimer {
@@ -274,6 +312,36 @@ aside,
     letter-spacing: 1px;
 }
 
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #94DAD6;
+    padding-left: 30px;
+}
+
+/* ----------------
+IMAGE STYLES
+------------------------------------------ */
+
+section#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    padding: 2rem 0 2rem 0;
+    position: relative;
+}
+
+.galItem1 img,
+.galItem2 img {
+    border: 9px solid rgb(243, 243, 243);
+}
+
+section#gallery .galItem1 {
+    justify-self: end;
+}
+
+section#gallery .galItem2 {
+    justify-self: start;
+}
 
 
 /* ----------------
@@ -282,28 +350,108 @@ CHART SECTIONS
 
 div.chart {
     padding: 1rem 0 2.5rem 0;
+    display: grid;
+    /* margin: auto; */
+}
+
+/* Jury Gender Charts */
+div.chart.jury figure#genderJuryLine,
+div.chart.jury figure#genderJuryStack {
+    width: 530px;
+}
+
+div.chart.jury {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Make the chart notes pretty */
+div.chart.jury .chartNotes {
+    grid-column: span 2;
+    font-family: droid-sans-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Modify the chart labels */
+div.chart.jury p {
+    font-size: 0.85rem;
+    color: rgb(218, 218, 218);
+}
+
+div.chart.jury .cat1,
+div.chart.jury .cat2 {
+    grid-template-columns: 60px 60px;
+    text-transform: uppercase;
+    font-size: 0.675rem;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 figure h3 {
     line-height: 0.5;
 }
 
-figure p.note {
-    font-size: 0.75em;
-    color: #666;
-}
 
 /* ----------------
 Director STYLES
 ------------------------------------------ */
-.chart .directors {
-    width: 60%;
-    margin: auto;
+
+.chart.admin {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 225px);
 }
 
-.directors>img {
-    width: 20%;
+.chart.admin .directors-left,
+.chart.admin .directors-right {
+    display: grid;
+    grid-gap: 20px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 100px);
 }
+
+.chart.admin .directors-left img,
+.chart.admin .directors-right img {
+    width: 115px;
+}
+
+.chart.admin .directors-left img {
+    justify-self: end;
+}
+
+.chart.admin .directors-right img {
+    justify-self: start;
+}
+
+.chart.admin .directors-left div.name {
+    justify-self: start;
+}
+
+.chart.admin .directors-right div.name {
+    justify-self: end;
+}
+
+.chart.admin .directors-left .name>p,
+.chart.admin .directors-right .name>p {
+    margin: 0;
+    padding-top: 1.5rem;
+}
+
+.chart.admin .directors-left .rule,
+.chart.admin .directors-right .rule {
+    grid-column: span 2;
+}
+
+.chart.admin .directors-left .rule>svg,
+.chart.admin .directors-right .rule>svg {
+    display: block;
+    margin: auto;
+
+}
+
+
 
 
 /* ----------------
@@ -345,7 +493,6 @@ figure .y_axis {
     stroke: #eee;
 }
 
-
 .xlabel,
 .ylabel {
     font-size: 0.725rem;
@@ -375,5 +522,5 @@ footer {
 
 footer div.methodology p {
     font-size: 0.7em;
-    color: #666;
+    color: rgb(201, 201, 201);
 }
