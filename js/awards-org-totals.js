@@ -7,7 +7,7 @@ function orgTotals() { // object has curly braces, brackets are arrays
 			top: 20,
 			right: 20,
 			bottom: 30,
-			left: 225,
+			left: 260,
 		}
 	};
 	// create two new parameters
