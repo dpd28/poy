@@ -7,7 +7,7 @@ function freelance() { // object has curly braces, brackets are arrays
 			top: 20,
 			right: 20,
 			bottom: 30,
-			left: 80,
+			left: 70,
 		}
 	};
 
@@ -72,7 +72,11 @@ function freelance() { // object has curly braces, brackets are arrays
 				// we can update the domain of the xScale with d3.extent
 				//xScale.domain(d3.extent(data, function(d) {return d.percent}));
 				// method is the same as function but used for back to back
-				xScale.domain( [ 0, d3.max( data, d => d.percent ) ] );
+			// * Below was original statement but plot went to far to edge
+				// xScale.domain( [ 0, d3.max( data, d => d.percent ) ] );
+			// ! This isn't quite right either. Need to go to 35% but keep increments from original statement above
+				xScale.domain( [ 0, 0.35 ] ); 
+
 				// accessor is which column of data you want to use
 
 				yScale.domain( data.map( d => d.year ) ); // map method
@@ -85,8 +89,8 @@ function freelance() { // object has curly braces, brackets are arrays
 					.attr( "x2", xScale( 0 ) )
 					.attr( "y1", d => yScale( d.year ) + 0.5 )
 					.attr( "y2", d => yScale( d.year ) + 0.5 )
-					.attr( "stroke-width", 0.95 )
-					.attr( "stroke", "#eeeeee" );
+					.attr( "stroke-width", 1 )
+					.attr( "stroke", "#999999" );
 
 				var candy = freelance.selectAll( "circle" )
 					// join the selection of rectangles with data and then modify
@@ -96,40 +100,39 @@ function freelance() { // object has curly braces, brackets are arrays
 					// set the y position of the center
 					.attr( "cy", d => yScale( d.year ) )
 					.attr( "cx", d => xScale( d.percent ) )
-					.attr( "r", 7 )
+					.attr( "r", 8 )
 					// .attr("height", yScale.bandwidth())
-					.attr( "fill", "#46acaa" );
+					.attr( "fill", "#03c9ec" );
 
-					// NOT SURE WHY THIS ISN'T WORKING
-				// var gridlines = d3.axisBottom()
-                //     .tickFormat("")
-                //     .tickSize(-height)
-                //     .scale(xScale);
-
-				// line svg2 has 4 values x1 x2 y1 y2
 
 				xAxisGenerator.tickSize(-200); // IS THIS WORKING?
 
 				var xAxis = freelance.append( "g" )
 					.attr( "class", "x-axis" )
-					.call( d3.axisBottom( xScale ) )
+					.call( d3.axisBottom( xScale )
+					.tickFormat(d3.format(".0%"))) // change to percent
+				// TODO - NEED TO MODIFY THIS FOR HEIGHT AND GRIDLINES AFTER SCALE IS FIXED
+						// .tickSize(-height, 0, 0)
+						// .tickFormat("") )
 					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` )
 					.call(g => g.select(".domain").remove())// removes the line for axis
 					// .call(g => g.select(gridlines));
-				
 
 				var xAxisText = xAxis.selectAll( "text" )
 					.attr( "class", "axis_text" )
-					.style( "fill", "#eee" )
+					.style( "fill", "#2d2d2d" )
 
 				var yAxis = freelance.append( "g" )
 					.attr( "class", "y-axis" )
-					.call( d3.axisLeft( yScale ) )
+					.call( d3.axisLeft( yScale )
+					// move axis labels away from ticks and lines
+						.tickPadding([10]) 
+						.tickSize("0") )
 					.call(g => g.select(".domain").remove()); // removes the line for axis
 
 				var yAxisText = yAxis.selectAll( "text" )
 					.attr( "class", "axis_text" )
-					.style( "fill", "#eee" );
+					.style( "fill", "#2d2d2d" );
 			}
 		);
 }

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta author="Deb Pang Davis">
-	<title>Reframing Photographs</title>
+	<title>It's a Man’s World</title>
 	<!-- <link rel="stylesheet" href="styles/timeline.css"> -->
 	<link rel="stylesheet" type="text/css" href="styles/styles-main.css" media="screen" />
 	<link rel="stylesheet" href="https://use.typekit.net/uyo2axu.css">
@@ -237,8 +237,9 @@
 				</figcaption>
 
 			</div>
-		</section>
+		</section><!-- end gallery section -->
 		<section>
+			<!-- Begin Jury Charts Section -->
 			<div class="text">
 				<h3>Historically, the POY jury has been all male.</h3>
 				<p>Yet, during Bill Kuykendall’s tenure, female representation started to become a higher priority.
@@ -247,8 +248,9 @@
 					the voices of female judges were highly valued. Women “had a better sense of proportion and
 					understood how to
 					compromise while remaining steadfast champions of [exceptional] work”.</p>
-			</div>
+			</div><!-- end text -->
 			<div class="chart jury">
+				<!-- TODO Add new copy here and fix width and styles -->
 				<div class="chartNotes">
 					<p>Number of women versus men. Mouseover to view totals and percentages (coming soon).Until 1986 the
 						total number of jury members was five per award category. Bill Kuykendall and Randy Miller
@@ -258,7 +260,7 @@
 						JUDGES PER YEAR VARIED DEPENDING ON NUMBER OF AWARD CATEGORIES)
 					</p>
 					<h2 style="color:red;">still adding details, hovers, annotations, etc.</h2>
-
+					<!-- TODO get rid of this HTML legend; May not need -->
 					<!-- <div class="cat1"> -->
 					<!-- <div class="cat1">
 						<svg width="60" height="20">
@@ -280,7 +282,10 @@
 				<figure id="genderJuryStack">
 					<p>Gender Representation of Jurors (Percentage)</p>
 				</figure>
-			</div><!-- end chart -->
+			</div><!-- end chart jury -->
+		</section><!-- end jury section -->
+		<section>
+			<!-- Begin winners - photographers - section -->
 			<div class="text">
 				<h2>The Photographers (Award Winners)</h2>
 				<p>For many years, photo competitions offered the rare outlet for photographers to have their work
@@ -292,18 +297,24 @@
 					prestige within and out of the photojournalism community. Most were men, giving them more and highly
 					coveted assignments and greater earning power (source?).</p>
 			</div>
-			<div class="chart">
-				<div class="text">
-					<h3>Gender Breakdown of Photographers who won a Pictures of the Year award</h3>
-					<p>Number of women versus men. Mouseover to view total awards per year and percentages (coming
-						soon) or Change to percentage? Or use small multiples to make comparison more clear.
-				</div>
-				<h2 style="color:red;">NEED TO ADD LINE AND AREA CHARTS HERE -- ARGH</h2>
-
-				<figure id="genderPhotogs">
+			<!-- BEGIN Photographers Gender Breakdown Charts -->
+			<div class="chart photogs">
+				<div class="chartNotes">
+					<!-- TODO Add new copy here and fix width -->
+					<p>asdsadjks — Gender Breakdown of Photographers who won a Pictures of the Year
+						award. Number of women versus men. Mouseover to view total awards per year and percentages
+						(coming
+						soon) or Change to percentage? Or use small multiples to make comparison more clear.</p>
+				</div><!-- end chartNotes-->
+				<figure id="genderPhotogsLine">
+					<p>Gender Representation of Winners (Total Numbers)</p>
 				</figure>
-			</div><!-- end chart-->
-			<div class="chart">
+				<figure id="genderPhotogsStack">
+					<p>Gender Representation of Winners (Percentage)</p>
+				</figure>
+			</div><!-- end chart photogs-->
+			<!-- TODO Get rid of this HTML AFTER Saving a back up of the file. Female jurors to female winners scatterplot example — Make screengrab for documentation and paper!!!! -->
+			<!-- <div class="chart">
 				<div class="text">
 					<h3>Is there a relationship between the number of female jurors and female award winners?</h3>
 					<p>No. Between 1984 and 2004, there isn’t a parallel between the number of female judges and female
@@ -322,11 +333,11 @@
 						https://medium.com/@denisavitova/why-female-photographers-still-mimic-the-male-gaze-b0a23f831773
 						)what impact does winning a Pictures of the Year award or any photojournalism competition have
 						on how we view people within our communities and around the world? </p>
-				</div>
-				<h2 style="color:red;">THIS IS YOUR MIND. REMOVE THE CHART BELOW.</h2>
-				<figure id="femalescatter">
-				</figure>
-			</div><!-- end chart-->
+				</div> -->
+			<!-- <h2 style="color:red;">THIS IS YOUR MIND. REMOVE THE CHART BELOW.</h2> -->
+			<!-- <figure id="femalescatter">
+				</figure> -->
+			<!-- </div> --end chart-->
 		</section>
 		<div class="quote">
 			<p>It is vital that we do not see the world only through the eyes of men. <span>A women
@@ -379,12 +390,8 @@
 			</div>
 			<div class="chart">
 				<!-- <h4>The Top 25 Award-winning Organizations</h4> -->
-				<h4>A total of 3,810 awards were given between 1984 and 2004.</h4>
+				<h4>A total of 3,803 awards were given to photographers between 1984 and 2004.</h4>
 				<div class="chartNotes">
-					<!-- <p>A total of 3,810 awards were given between 1984 and 2004. <em>National Geographic</em>, <em>The
-							Washington Post</em>, and The Associated Press were the top three award-winning
-						organizations.
-					</p> -->
 					<p>Below are the top 25 award-winning organizations. <em>National Geographic</em>, <em>The
 							Washington Post</em>, and The Associated Press won the most awards.
 					</p>
@@ -393,6 +400,9 @@
 				<figure id="orgTotalAwards">
 				</figure>
 			</div><!-- end chart -->
+			<div class="text">
+				<p>alsdkaldjkaljdslajkd</p>
+			</div><!-- end text -->
 			<div class="chart">
 				<h4>Of those top 25 organizations, women won 198 awards and men won 755 awards.</h4>
 				<div class="chartNotes">
@@ -401,14 +411,14 @@
 					</p>
 				</div>
 				<!--end chartNotes-->
-
 				<figure id="orgAwardsGender">
 					<!-- TODO THIS NEEDS TO BE MODIFIED IN ILLUSTRATOR OR ATTEMPT IN D3. SMALL MULTIPLES-->
 					<img src="images/top25org-genderRep.svg" width: 100% />
 				</figure>
 			</div><!-- end chart -->
-		</section>
+		</section><!-- end top 25 organizations awards -->
 		<section>
+			<!-- begin freelancers awards -->
 			<div class="text">
 				<h2>Freelance Photographers</h2>
 				<p>Between 1984 and 2004, a total of 478 freelance photographers won the most awards. Not
@@ -424,29 +434,21 @@
 				<div class="chartNotes">
 					<h4>Percentage of Award Winners Who are Freelance Photographers</h4>
 					<p>Note: The percentages included here were derived from award winners designated as freelance.</p>
-				</div>
+				</div><!-- end chartNotes -->
 				<figure id="freelance">
 				</figure>
 			</div><!-- end chart -->
-			<div class="chart">
-				<div class=chartNotes">
-					<h4>And, the gender representation of award-winning freelance photographers </h4>
-				</div>
-				<figure id="freelanceGender">
-					THIS VERSION? -- Male vs female
-					<img src="images/freelance-gender-line-v1.svg" width: 90% />
+			<div class="chart freelance">
+				<div class="chartNotes">
+					<p>And, the gender representation of award-winning freelance photographers</p>
+				</div><!-- end chartNotes -->
+				<!-- TODO Add d3 line chart here for freelance gender breakdown -->
+				<figure id="freelancegenderline">
 				</figure>
-				<figure id="freelanceGender-2">
-					OR THIS VERSION? Male vs female (need to make bars larger)
-					<img src="images/grouped bar freelance gender.svg" width: 100% />
+				<figure id="freelancegenderstack">
 				</figure>
-				<!-- <img src="images/datawrapper-freelance-gendersplit.png" /> -->
 			</div><!-- end chart -->
 		</section>
-		<!-- <section>
-				<h3>Small Multiples of Waffle Charts?</h3>
-				<figure id="freelanceWaffle"></figure>
-			</section> -->
 		<svg id="gendericns" data-name="gender" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.12 89.79">
 			<defs>
 				<style>
@@ -489,6 +491,7 @@
 			</div>
 		</section> -->
 		<section>
+			<!-- Begin Conclusion -->
 			<div class="text">
 				<!-- <h2>Still a Boys Club…or Is It?</h2> -->
 				<h2>The Male Gaze?</h2>
@@ -534,9 +537,13 @@
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="js/jurylinegender.js"></script>
 	<script src="js/jurygenderstackarea.js"></script>
-	<script src="js/juryphotogscatterconnect.js"></script>
+	<script src="js/photoglinegender.js"></script>
+	<script src="js/photoggenderstackarea.js"></script>
+	<!-- <script src="js/juryphotogscatterconnect.js"></script> -->
 	<script src="js/awards-org-totals.js"></script>
 	<script src="js/freelance.js"></script>
+	<script src="js/freelancelinegender.js"></script>
+	<script src="js/freelancegenderstackarea.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

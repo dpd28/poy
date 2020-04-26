@@ -1,4 +1,4 @@
-function photogLineGender() {
+function freelanceLineGender() {
   // set the dimensions and margins of the graph
   var margin = {top: 10, right: 30, bottom: 30, left: 30},
       width = 500 - margin.left - margin.right,
@@ -6,7 +6,7 @@ function photogLineGender() {
   
   
   // append the svg object to the body of the page
-  var svg = d3.select("figure#genderPhotogsLine")
+  var svg = d3.select("figure#freelancegenderline")
     .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -16,7 +16,7 @@ function photogLineGender() {
   
   
   //Read the data
-  d3.csv("data/photogsGenderLine.csv", function(data) {
+  d3.csv("data/freelanceGenderLine.csv", function(data) {
   
     // group the data: Draw one line per group
     var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor

@@ -1,10 +1,11 @@
 ﻿organization,value,percent
+Courier-Journal,31,0.01
 Sacramento Bee,32,0.01
-Copley Chicago Newspapers,33,0.01
 Seattle Times,33,0.01
+Copley Chicago Newspapers,34,0.01
 Chicago Tribune,34,0.01
-Agence France-Presse,36,0.01
 Detroit Free Press,37,0.01
+Agence France-Presse,37,0.01
 Hartford Courant,38,0.01
 Virginian-Pilot,43,0.01
 Sports Illustrated,47,0.01
@@ -12,14 +13,14 @@ San Jose Mercury News,49,0.01
 Orange County Register,50,0.01
 Dallas Morning News,59,0.02
 Miami Herald,61,0.02
-Boston Globe,63,0.02
+Boston Globe,62,0.02
 Pittsburgh Post-Gazette,65,0.02
 TIME,66,0.02
 Contact Press Images,67,0.02
 Black Star,69,0.02
 Magnum,72,0.02
 Philadelphia Inquirer,76,0.02
-Los Angeles Times,81,0.02
+Los Angeles Times,82,0.02
 Associated Press,99,0.03
 Washington Post,104,0.03
 National Geographic,108,0.03

@@ -1,52 +1,58 @@
 /*
 COLORS
- #F5F2F0;
- #a1aeb7 - grey blue
- #b59365 - gold
- #BFBFBF - grey
- #B9AAB6 - lavendar
- #f5cf53 - Yellow
- fffd77 - chartreuse
 
  #46acaa - Light teal -- this one currently used
 
- FONTS
+FONTS
 font-family: ff-real-text-pro,sans-serif;
 font-weight: 200;
 font-style: normal;
+
 font-family: ff-real-text-pro,sans-serif;
 font-weight: 200;
 font-style: italic;
-font-family: pt-mono,monospace;
-font-weight: 400;
-font-style: normal;
-font-family: fira-mono,monospace;
-font-weight: 400;
-font-style: normal;
+
 font-family: droid-sans-mono,monospace;
 font-weight: 400;
 font-style: normal;
-
     font-family: adobe-handwriting-tiffany, sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    font-family: ff-real-headline-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    font-family: ff-tisa-web-pro,serif;
+font-weight: 400;
+font-style: normal;
+Newest Colors
+#ff6e5d
+#a02799
+#03c9ec
+#2d2d2d
+color: rgb(45, 45, 45);
+
  */
 
 
 
 body {
     margin: 0;
-    font-family: ff-real-text-pro, sans-serif;
+    font-family: ff-tisa-web-pro, serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: rgb(218, 218, 218);
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: rgb(45, 45, 45);
+    /* color: rgb(218, 218, 218); */
     border-top: 24px solid #000;
-    /* background: rgb(255, 255, 255); */
+    background: rgb(239, 239, 239);
     /* background: rgb(33, 33, 33); */
     /* background: rgb(72, 72, 72); */
-    background: rgb(68, 68, 68);
+    /* background: rgb(68, 68, 68); */
     /*  background: rgb(170, 167, 165); -- nice grey */
 
 }
@@ -205,7 +211,7 @@ p.kicker-label {
 }
 
 div.text {
-    width: 722px;
+    width: 700px;
     margin: auto;
     padding: 1rem 2.5rem;
 }
@@ -228,7 +234,8 @@ div.quote {
 div.quote p {
     margin: 0 0 0 60px;
     font-size: 1.7rem;
-    color: #e1e1e1;
+    /* color: #e1e1e1; */
+    color: #2d2d2d;
     text-transform: uppercase;
     font-family: ff-real-headline-pro, sans-serif;
     font-weight: 700;
@@ -237,7 +244,7 @@ div.quote p {
 }
 
 div.quote p span {
-    color: #94DAD6;
+    color: #03c9ec;
 }
 
 div.quote p.attribution {
@@ -314,7 +321,8 @@ aside,
 
 blockquote {
     font-style: italic;
-    border-left: 5px solid #94DAD6;
+    border-left: 5px solid #03c9ec;
+
     padding-left: 30px;
 }
 
@@ -332,7 +340,7 @@ section#gallery {
 
 .galItem1 img,
 .galItem2 img {
-    border: 9px solid rgb(243, 243, 243);
+    border: 9px solid rgb(9, 9, 9);
 }
 
 section#gallery .galItem1 {
@@ -354,30 +362,43 @@ div.chart {
     /* margin: auto; */
 }
 
-/* Jury Gender Charts */
+/* Gender Charts */
 div.chart.jury figure#genderJuryLine,
-div.chart.jury figure#genderJuryStack {
+div.chart.jury figure#genderJuryStack,
+div.chart.photogs figure#genderPhotogsLine,
+div.chart.photogs figure#genderPhotogsStack,
+div.chart.freelance figure#freelancegenderline,
+div.chart.freelance figure#freelancegenderstack {
     width: 530px;
 }
 
-div.chart.jury {
+div.chart.jury,
+div.chart.photogs,
+div.chart.freelance {
     grid-template-columns: 1fr 1fr;
 }
 
 /* Make the chart notes pretty */
-div.chart.jury .chartNotes {
+div.chart.jury .chartNotes,
+div.chart.photogs .chartNotes,
+div.chart.freelance .chartNotes {
     grid-column: span 2;
     font-family: droid-sans-mono, monospace;
     font-weight: 400;
     font-style: normal;
 }
 
-/* Modify the chart labels */
-div.chart.jury p {
+/* Modify the chart description */
+div.chart.jury p,
+div.chart.photogs p,
+div.chart.freelance p {
     font-size: 0.85rem;
-    color: rgb(218, 218, 218);
+    /* color: rgb(218, 218, 218); */
+    color: rgb(45, 45, 45);
+
 }
 
+/* -- May not be using this. Check HTML --*/
 div.chart.jury .cat1,
 div.chart.jury .cat2 {
     grid-template-columns: 60px 60px;
@@ -463,17 +484,11 @@ CHART STYLES
 ------------------------------------------ */
 /* increase the size of the labels on the axis */
 figure .axis_text {
-    /* font-family: pt-mono, monospace;
-    font-weight: 400;
-    font-style: normal; */
-    /* font-family: fira-mono, monospace;
-    font-weight: 400;
-    font-style: normal; */
     font-family: droid-sans-mono, monospace;
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    color: #eee;
+    color: #2d2d2d;
 }
 
 /* figure .x_axis,
@@ -483,26 +498,41 @@ figure .y_axis {
 
 .x_axis text,
 .y_axis text {
-    fill: #eee;
+    font-family: droid-sans-mono, monospace;
+    fill: #2d2d2d;
 }
 
 .x_axis line,
 .y_axis line {
-    stroke: #eee;
+    /* stroke: #eee; */
+    stroke: #2d2d2d;
     opacity: 0.2;
 }
 
 .x_axis path,
 .y_axis path {
-    stroke: #eee;
+    /* stroke: #eee; */
+    stroke: #2d2d2d;
 }
+
+/* ----- remove for line charts ----- */
+/* ---- DID THIS WORK? ---- */
+/* figure#orgTotalAwards .x_axis path  */
+figure#genderJuryLine .x_axis path,
+figure#genderPhotogsLine .x_axis path,
+figure#freelancegenderline .x_axis path,
+figure#orgTotalAwards .x_axis path {
+    stroke-width: 0;
+}
+
 
 .xlabel,
 .ylabel {
     font-size: 0.725rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #eee;
+    /* color: #eee; */
+    color: #2d2d2d;
 }
 
 /* .grid line {
@@ -526,5 +556,6 @@ footer {
 
 footer div.methodology p {
     font-size: 0.7em;
-    color: rgb(201, 201, 201);
+    /* color: rgb(201, 201, 201); */
+    color: rgb(45, 45, 45);
 }

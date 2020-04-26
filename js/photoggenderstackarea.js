@@ -6,7 +6,7 @@ function photogStackGender() {
       height = 393 - margin.top - margin.bottom;
   
   // append the svg object to the body of the page
-  var svg = d3.select("figure#genderJuryStack")
+  var svg = d3.select("figure#genderPhotogsStack")
     .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -15,7 +15,7 @@ function photogStackGender() {
             "translate(" + margin.left + "," + margin.top + ")");
   
   // Parse the Data
-  d3.csv("data/judgesGenderArea.csv", function(data) {
+  d3.csv("data/photogsGenderArea.csv", function(data) {
   
   
     //////////
@@ -29,7 +29,7 @@ function photogStackGender() {
     var color = d3.scaleOrdinal()
       .domain(keys)
       //.range(d3.schemeSet2);
-      .range(['#c87ef8','#FCB643']);
+      .range(['#a02799','#ff6e5d']);
 
     //stack the data?
     var stackedData = d3.stack()
@@ -49,6 +49,7 @@ function photogStackGender() {
     .attr( "class", "x_axis" )
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x)
+      .tickPadding([10]) // moves axis labels away from ticks and lines
       .tickFormat(d3.format(".0f"))) // change 1,984 to 1984
       .call(g => g.select(".domain").remove()); // removes the line for axis
 

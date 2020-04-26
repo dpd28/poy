@@ -32,13 +32,14 @@ function juryLineGender() {
       .attr( "class", "x_axis" )
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x)
+      .tickPadding([10]) // moves axis labels away from ticks and lines
       .tickSize(-height, 0, 0)
       .tickFormat("")
       .tickFormat(d3.format(".0f"))) // change 1,984 to 1984
-      .call(g => g.selectAll(".tick:not(:first-of-type) line")
+      // .call(g => g.selectAll(".tick:not(:first-of-type) line")
       // .attr("stroke-opacity", 0.3) // lightens the gridlines
-      .attr("stroke-dasharray", "2,2")) // add gridlines and make them dashed
-      .call(g => g.select(".domain").remove());
+      .attr("stroke-dasharray", "2,2"); // add gridlines and make them dashed
+      // .call(g => g.select(".domain").remove());
 
     // Add Y axis
     var y = d3.scaleLinear()
@@ -47,6 +48,8 @@ function juryLineGender() {
       svg.append("g")
       .attr( "class", "y_axis" )
       .call(d3.axisLeft(y)
+      .tickPadding([10]) // moves axis labels away from ticks and lines
+      .tickSize("0") // remove ticks
       .tickFormat(d3.format("0"))) // change 7.0 to whole numbers
       .call(g => g.select(".domain").remove()); // removes the line for axis
   
@@ -55,7 +58,8 @@ function juryLineGender() {
     var res = sumstat.map(function(d){ return d.key }) // list of group names
     var color = d3.scaleOrdinal()
       .domain(res)
-      .range(['#c87ef8','#FCB643'])
+      .range(['#a02799','#ff6e5d'])
+
 
     // Draw the line
     svg.selectAll(".line")

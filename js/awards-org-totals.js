@@ -5,8 +5,8 @@ function orgTotals() { // object has curly braces, brackets are arrays
 		height: 800,
 		margin: {
 			top: 20,
-			right: 20,
-			bottom: 30,
+			right: 30,
+			bottom: 40,
 			left: 260,
 		}
 	};
@@ -78,10 +78,28 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 				// we can update the domain of the xScale with d3.extent
 				//xScale.domain(d3.extent(data, function(d) {return d.value}));
 				// method is the same as function but used for back to back
-				xScale.domain( [ 0, d3.max( data, d => d.value ) ] ); // accessor - column of data you want to use
-
+				// xScale.domain( [ 0, d3.max( data, d => d.value ) ] ); // accessor - column of data you want to use
+				xScale.domain( [ 0, 110 ] );
 				yScale.domain( data.map( d => d.organization ) ); // map method
 
+				var xAxis = svg.append( "g" )
+					.attr( "class", "x_axis" )
+					.call( d3.axisBottom(xScale)
+					// add gridlines
+					.tickSize(-dimensions.boundedHeight, 0, 0)
+					.tickFormat(""))
+					.attr( "transform", `translate(0, ${dimensions.boundedHeight})`)
+					// add gridlines and make them dashed
+					.attr("stroke-dasharray", "2,2"); 
+					// remove the line for axis
+					// .call(g => g.select(".domain").remove()); 
+
+				// ! WHAT HAPPENED TO THE X-AXIS LABELS????
+				var xAxisText = xAxis.selectAll( "text" )
+					.attr( "class", "axis_text" )
+					.style( "fill", "#2d2d2d" );
+
+				// add bars after axis to be in front of gridlines
 				var bars = svg.selectAll( "rect" )
 					// join the selection of rectangles with data and then modify
 					.data( data )
@@ -90,29 +108,20 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 					.attr( "y", d => yScale( d.organization ) ) // set the position of the rectangle and match category names
 					.attr( "width", d => xScale( d.value ) )
 					.attr( "height", yScale.bandwidth() )
-					//.attr( "fill", "#46acaa" );
-					.attr( "fill", "#94DAD6" );
-					//.attr( "fill", "#bee4f7");
-					// .attr( "fill", "#72ccbf" );
-
-				var xAxis = svg.append( "g" )
-					.attr( "class", "x_axis" )
-					.call( d3.axisBottom( xScale ) )
-					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` )
-					.call(g => g.select(".domain").remove()); // removes the line for axis
-
-				var xAxisText = xAxis.selectAll( "text" )
-					.attr( "class", "axis_text" )
-					.style( "fill", "#eee" );
+					.attr( "fill", "#03c9ec" );
 
 				var yAxis = svg.append( "g" )
 					.attr( "class", "y_axis" )
-					.call( d3.axisLeft( yScale ) )
+					.call( d3.axisLeft( yScale )
+					// move axis labels away from ticks and lines
+					.tickPadding([10]) 
+					// remove ticks
+					.tickSize("0")) 
 					.call(g => g.select(".domain").remove()); // removes the line for axis
 
 				var yAxisText = yAxis.selectAll( "text" )
 					.attr( "class", "axis_text" )
-					.style( "fill", "#eee" );
+					.style( "fill", "#2d2d2d" );
 
 			}
 		);

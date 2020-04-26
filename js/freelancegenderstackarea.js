@@ -1,4 +1,4 @@
-function juryStack() {
+function freelanceStackGender() {
 
   // set the dimensions and margins of the graph
   var margin = {top: 10, right: 30, bottom: 30, left: 40},
@@ -6,7 +6,7 @@ function juryStack() {
       height = 393 - margin.top - margin.bottom;
   
   // append the svg object to the body of the page
-  var svg = d3.select("figure#genderJuryStack")
+  var svg = d3.select("figure#freelancegenderstack")
     .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -15,7 +15,7 @@ function juryStack() {
             "translate(" + margin.left + "," + margin.top + ")");
   
   // Parse the Data
-  d3.csv("data/judgesGenderArea.csv", function(data) {
+  d3.csv("data/freelanceGenderArea.csv", function(data) {
   
   
     //////////
@@ -30,6 +30,8 @@ function juryStack() {
       .domain(keys)
       //.range(d3.schemeSet2);
       .range(['#a02799','#ff6e5d']);
+
+      
 
     //stack the data?
     var stackedData = d3.stack()

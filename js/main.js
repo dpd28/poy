@@ -1,5 +1,8 @@
 juryLineGender();
 juryStack();
-femaleScatter();
+photogLineGender();
+photogStackGender();
 orgTotals();
 freelance();
+freelanceLineGender();
+freelanceStackGender()
