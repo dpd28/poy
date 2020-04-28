@@ -126,8 +126,7 @@
 				<div class="directors-left">
 					<img src="images/c.edom-tmb@2x.png" />
 					<div class="name">
-						<p>Cliff Edom
-							<br />1944-1972</p>
+						<p>Cliff Edom<br />1944-1972</p>
 					</div>
 					<div class="rule">
 						<svg height="210" width="500">
@@ -218,9 +217,9 @@
 		<section id="gallery">
 			<div class="galItem1">
 				<picture>
-					<source srcset='images/1986.Columbia.036@1x.png' media='(min-width: 320px)' type='image/png'>
-					<source srcset='images/1986.Columbia.036@2x.png' media='(min-width: 800px)' type='image/png'>
-					<img src='images/1986.Columbia.036@1x.png' alt=''>
+					<source srcset='images/1986.Columbia.036@1x.jpg' media='(min-width: 320px)' type='image/jpg'>
+					<source srcset='images/1986.Columbia.036@2x.jpg' media='(min-width: 800px)' type='image/jpg'>
+					<img src='images/1986.Columbia.036@1x.jpg' alt=''>
 				</picture> <!-- *TODO add alt tag information -->
 				<!-- *TODO add caption information here! -->
 				<figcaption>A caption for the first photograph goes here. Photo by Mike Davis.
@@ -228,9 +227,9 @@
 			</div>
 			<div class="galItem2">
 				<picture>
-					<source srcset='images/1986.Poy judging@1x.png' media='(min-width: 320px)' type='image/png'>
-					<source srcset='1986.Poy judging@2x.png' media='(min-width: 800px)' type='image/png'>
-					<img src='images/1986.Poy judging@1x.png' alt=''>
+					<source srcset='images/1986.Poy.judging@1x.jpg' media='(min-width: 320px)' type='image/jpg'>
+					<source srcset='images/1986.Poy.judging@2x.jpg' media='(min-width: 800px)' type='image/jpg'>
+					<img src='images/1986.Poy.judging@1x.jpg' alt=''>
 				</picture><!-- *TODO add alt tag information -->
 				<!-- *TODO add caption information here! -->
 				<figcaption>This will be a short caption for the second photograph.
@@ -249,39 +248,41 @@
 					understood how to
 					compromise while remaining steadfast champions of [exceptional] work”.</p>
 			</div><!-- end text -->
+			<!-- TODO Add annotations and notes. judges per year varied. Mouseover instructions -->
+			<!-- <h2 style="color:red;">still adding details, hovers, annotations, etc.</h2> -->
 			<div class="chart jury">
-				<!-- TODO Add new copy here and fix width and styles -->
-				<div class="chartNotes">
-					<p>Number of women versus men. Mouseover to view totals and percentages (coming soon).Until 1986 the
-						total number of jury members was five per award category. Bill Kuykendall and Randy Miller
-						increased the
-						jury panel to six in an effort to streamline the judging process as POY transitioned
-						from mounted prints to the projection of slides. (NEED TO ADD ANNOTATIONS - TOTAL NUMBER OF
-						JUDGES PER YEAR VARIED DEPENDING ON NUMBER OF AWARD CATEGORIES)
-					</p>
-					<h2 style="color:red;">still adding details, hovers, annotations, etc.</h2>
-					<!-- TODO get rid of this HTML legend; May not need -->
-					<!-- <div class="cat1"> -->
-					<!-- <div class="cat1">
+				<!-- TODO get rid of this HTML legend; May not need -->
+				<!-- <div class="cat1"> -->
+				<!-- <div class="cat1">
 						<svg width="60" height="20">
 							<rect x="10" y="10" width="50" height="10" rect fill="#FCB643" />
 						</svg>
 						<p>Male</p> -->
-					<!-- </div> -->
-					<!-- <div class="cat2"> -->
-					<!-- <svg width="60" height="20">
+				<!-- </div> -->
+				<!-- <div class="cat2"> -->
+				<!-- <svg width="60" height="20">
 							<rect x="10" y="10" width="50" height="10" rect fill="#c87ef8" />
 						</svg>
 						<p>Female</p>
 					</div> -->
-					<!--end cat1-->
-				</div>
+				<!--end cat1-->
+				<div class="chartExplainer">
+					<h4>Gender Representation of POYi Jurors</h4>
+					<p>Explainer text placeholder</p>
+				</div><!-- end chartExplainer -->
 				<figure id="genderJuryLine">
-					<p>Gender Representation of Jurors (Total Numbers)</p>
+					<p>Women versus Men (Total Numbers)</p>
 				</figure>
 				<figure id="genderJuryStack">
-					<p>Gender Representation of Jurors (Percentage)</p>
+					<p>Women versus Men (Percentage)</p>
 				</figure>
+				<div class="chartNotes">
+					<p>Until 1986 the
+						total number of jury members was five per award category. Bill Kuykendall and Randy Miller
+						increased the
+						jury panel to six in an effort to streamline the judging process as POY transitioned
+						from mounted prints to the projection of slides.</p>
+				</div><!-- end ChartNotes -->
 			</div><!-- end chart jury -->
 		</section><!-- end jury section -->
 		<section>
@@ -299,18 +300,16 @@
 			</div>
 			<!-- BEGIN Photographers Gender Breakdown Charts -->
 			<div class="chart photogs">
-				<div class="chartNotes">
-					<!-- TODO Add new copy here and fix width -->
-					<p>asdsadjks — Gender Breakdown of Photographers who won a Pictures of the Year
-						award. Number of women versus men. Mouseover to view total awards per year and percentages
-						(coming
-						soon) or Change to percentage? Or use small multiples to make comparison more clear.</p>
-				</div><!-- end chartNotes-->
+				<div class="chartExplainer">
+					<!-- TODO Add new copy here -->
+					<h4>Gender Representation of POYi Winners (Photographers)</h4>
+					<p>asdsadjks</p>
+				</div><!-- end chartExplainer-->
 				<figure id="genderPhotogsLine">
-					<p>Gender Representation of Winners (Total Numbers)</p>
+					<p>Women versus Men (Total Numbers)</p>
 				</figure>
 				<figure id="genderPhotogsStack">
-					<p>Gender Representation of Winners (Percentage)</p>
+					<p>Women versus Men (Percentage)</p>
 				</figure>
 			</div><!-- end chart photogs-->
 			<!-- TODO Get rid of this HTML AFTER Saving a back up of the file. Female jurors to female winners scatterplot example — Make screengrab for documentation and paper!!!! -->
@@ -388,66 +387,111 @@
 					Bill Kuykendall’s tenure. The number of entries increased to tens of thousands, [increase in
 					sponsorships? exhibitions?]</p>
 			</div>
-			<div class="chart">
+			<div class="chart orgs">
 				<!-- <h4>The Top 25 Award-winning Organizations</h4> -->
-				<h4>A total of 3,803 awards were given to photographers between 1984 and 2004.</h4>
-				<div class="chartNotes">
-					<p>Below are the top 25 award-winning organizations. <em>National Geographic</em>, <em>The
+				<div class="chartExplainer">
+					<h4>A total of 3,803 awards were given to photographers between 1984 and 2004.</h4>
+					<p>Below are the top 25 award-winning publishing outlets. <em>National Geographic</em>, <em>The
 							Washington Post</em>, and The Associated Press won the most awards.
 					</p>
 				</div>
-				<!--end chartNotes-->
+				<!--end chartExplainer-->
 				<figure id="orgTotalAwards">
 				</figure>
 			</div><!-- end chart -->
-			<div class="text">
-				<p>alsdkaldjkaljdslajkd</p>
-			</div><!-- end text -->
-			<div class="chart">
-				<h4>Of those top 25 organizations, women won 198 awards and men won 755 awards.</h4>
-				<div class="chartNotes">
-					<p>Below is a breakdown per
-						organization. Note: The charts do not include missing data.
+			<div class="chart orgmultiples">
+				<div class="chartExplainer">
+					<h4>Of those top 25 publishing outlets, women won 198 awards and men won 755 awards.</h4>
+					<p>Below is the gender representation of award winners per outlet. <em>The Washington Post</em>,
+						<em>Pittsburgh Post-Gazette</em>, <em>The Boston Globe</em>, </em><em>The Dallas Morning
+							News</em>, <em>The Virginian-Pilot</em>, and <em>The Hartford Courant</em> show near parity
+						between women and men awardees.
 					</p>
 				</div>
-				<!--end chartNotes-->
+				<!--end chartExplainer-->
 				<figure id="orgAwardsGender">
 					<!-- TODO THIS NEEDS TO BE MODIFIED IN ILLUSTRATOR OR ATTEMPT IN D3. SMALL MULTIPLES-->
-					<img src="images/top25org-genderRep.svg" width: 100% />
+					<img src="images/orgGenderMultiples.svg" width: 80% />
 				</figure>
+				<div class="chartNotes">
+					<p>Missing, unknown, or team data is not included.</p>
+				</div>
 			</div><!-- end chart -->
 		</section><!-- end top 25 organizations awards -->
 		<section>
 			<!-- begin freelancers awards -->
 			<div class="text">
 				<h2>Freelance Photographers</h2>
-				<p>Between 1984 and 2004, a total of 478 freelance photographers won the most awards. Not
-					suprisingly,
-					this number has
-					increased since the beginning of the competition as full-time jobs for photographers have
-					decreased
-					dramatically over the years.</p>
-				<p>Beginning in early ’90s, newspaper jobs declined dramatically since the 1990s (need to add
-					annotation). As internet use gained traction</p>
+				<p>Naturally, as the more traditional model and markets for photojournalism showed signs of collapse,
+					the traditional outlets for publishing photojournalism also diminished. Full-time newspaper jobs
+					have declined dramatically since the 1990s (need to add annotation). Not surprisingly, there has
+					been a steady increase of freelance photographers over time. Given these conditions, it would be
+					natural to assume freelancers would be winning a greater percentage of awards each year.</p>
 			</div>
-			<div class="chart">
-				<div class="chartNotes">
-					<h4>Percentage of Award Winners Who are Freelance Photographers</h4>
-					<p>Note: The percentages included here were derived from award winners designated as freelance.</p>
-				</div><!-- end chartNotes -->
+			<div class="chart freelancetotal">
+				<div class="chartExplainer">
+					<h4>Percent of Award Winners Who are Freelance Photographers</h4>
+					<p>Between 1984 and 2004, a total of 477 awards were given to freelance photojournalists with a
+						significant percentage peak in the mid-to-late 90s.</p>
+				</div><!-- end chartExplainer -->
 				<figure id="freelance">
 				</figure>
-			</div><!-- end chart -->
-			<div class="chart freelance">
 				<div class="chartNotes">
-					<p>And, the gender representation of award-winning freelance photographers</p>
-				</div><!-- end chartNotes -->
+					<p>These percentages were derived from award winners designated as freelance or
+						independent. This may or may not include freelancers who were contracted by wire services or
+						photo agencies. Awards associated with an agency, wire service, newspaper or magazine,
+						were counted with the publishing outlets.</p>
+				</div>
+			</div><!-- end chart -->
+			<div class="text">
+				<p> Yet, beginning in 1999, the number of awards
+					given to freelancers shows a decline. Why? A few possibilities:</p>
+				<p>In 2001, after a split with the National Press Photographers Association (NPPA)
+					POY started to charge entry fees for the first time in its history.</p>
+				<p>2000 to
+					2004 brought major world events including the dot com bubble, Enron, 9/11 terrorist attacks, the War
+					on Terror, the War in Afghanistan, and several coups, conflicts and civil wars around the world.
+					Events considered “news” for U.S. publishing outlets meant sending photographers overseas to cover
+					them which meant resources and safety concerns. Most freelance photographers did not have such
+					resources unless contracted by major publishing outlets in the U.S. or Europe. It could be during
+					this time, publishing titles were devoting greater amounts of resources to major news events.</p>
+				<p>Even by the end of 2004, photographers were still employed by many newspapers. Fewer than years
+					before but many could still count on the benefits of full-time employment while also
+					having the resources and time to publish meaningful work. </p>
+				<p>So, even though 2004 also marked the beginning of a <a
+						href="https://www.usnewsdeserts.com/reports/expanding-news-desert/" target="_blank">sizeable
+						decline in local newspapers and the appearance of news deserts</a>, the most catastrophic
+					shedding of staff photographer jobs began with the Great Recession.</p>
+			</div>
+			<div class="chart freelancegender">
+				<div class="chartExplainer">
+					<h4>Gender Representation of Award Winning Freelancers</h4>
+					<p>Of the 477 number of awards awarded to freelancers, only 17% were won by women photographers
+						between 1984 and 2004.
+					</p>
+				</div><!-- end chartExplainer -->
 				<!-- TODO Add d3 line chart here for freelance gender breakdown -->
 				<figure id="freelancegenderline">
+					<p>Women versus Men (Numbers)</p>
 				</figure>
 				<figure id="freelancegenderstack">
+					<p>Women versus Men (Percent)</p>
 				</figure>
 			</div><!-- end chart -->
+			<div class="text">
+				<p>While the number of awards won by freelance photographers seem to have decreased between 2000 and
+					2004, by all other accounts, the number of freelance photojournalists were on the rise. Research
+					shows that greater numbers of freelance photojournalists are women. They also tend to be more
+					educated, use a diverse set of technology but suffer financially from erratic income and
+					assignments. (Source: Hadland & Barnett).
+
+				</p>
+				<p>If more
+					women are freelance photographers, what are the possible reasons for the lower numbers and what is
+					the impact for women in photojournalism? Do fewer women photographers enter contests? Why? Are fewer
+					women photographers sent on assignment? How does the definition of “news” impact who gets assigned
+					and ultimately who wins awards?</p>
+			</div>
 		</section>
 		<svg id="gendericns" data-name="gender" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.12 89.79">
 			<defs>
@@ -494,16 +538,23 @@
 			<!-- Begin Conclusion -->
 			<div class="text">
 				<!-- <h2>Still a Boys Club…or Is It?</h2> -->
-				<h2>The Male Gaze?</h2>
+				<h2>Why Are Women Still A Minority?</h2>
 				<p>This glimpse into the Pictures of the Year competition reinforces what many of us already know:
-					photojournalism is a male-dominated profession. It’s safe to say, for decades, women have had to
-					confront
-					circumstances and rise up to meet challenges unique to their sex. Still, they have endured those
-					challenges and circumstances to produce some of the most compelling photographs of our time.</p>
-				<p>From Jesse Tarbox of the X’s to X. Many have lost their lives, been captured, imprisoned, and
-					traumatized. Yet driven by X … Susan Meiselas, Maggie Steber, Carol Guzy, … 1984 to 2004 brought us
-					Yunghi Kim, etc. .
+					photojournalism is a male-dominated profession. It’s also safe to say women have had to confront
+					circumstances, rise up to meet challenges and address societal expectations unique to their sex.
+					Still, they have overcome those challenges, circumstances and expectations as well as those inherent
+					to photojournalism regardless of gender, to produce some of the most compelling photographs of our
+					time. Jesse Tarbox, Diane Arbus, Mary Ellen Mark, Susan Meiselas, Carol Guzy, Maggie Steber …
 				</p>
+				<h2 style="color:red;">[Add images by women here]</h2>
+				<p>Women have endured. Women have and continue to have a voice. So, why are women still a minority when
+					it comes to who gets assignments, who gets published, and who is represented in competitions? One
+					question addressed during analysis: What type of relationship exists between women jurors and women
+					winners? Between the years 1984 and 2004, there were none. </p>
+				<p>Given the noticeably dominant male perspective of the world through pictures and across centuries, it
+					is natural to wonder how this nearly singular perspective impacts our perceptions of the world. In
+					fact, researchers and practitioners alike have grappled with this question for decades in art, film,
+					and more recently photojournalism. </p>
 			</div>
 		</section>
 		<!-- BEGIN FOOTER -->

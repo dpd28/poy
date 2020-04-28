@@ -86,8 +86,8 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 					.attr( "class", "x_axis" )
 					.call( d3.axisBottom(xScale)
 					// add gridlines
-					.tickSize(-dimensions.boundedHeight, 0, 0)
-					.tickFormat(""))
+					.tickSize(-dimensions.boundedHeight, 0, 0))
+					// .tickFormat(""))
 					.attr( "transform", `translate(0, ${dimensions.boundedHeight})`)
 					// add gridlines and make them dashed
 					.attr("stroke-dasharray", "2,2"); 
@@ -108,7 +108,7 @@ d3.csv( "data/orgTopAwards.csv", rowConvertor, function( data ) {
 					.attr( "y", d => yScale( d.organization ) ) // set the position of the rectangle and match category names
 					.attr( "width", d => xScale( d.value ) )
 					.attr( "height", yScale.bandwidth() )
-					.attr( "fill", "#03c9ec" );
+					.attr( "fill", "#47bedb" );
 
 				var yAxis = svg.append( "g" )
 					.attr( "class", "y_axis" )

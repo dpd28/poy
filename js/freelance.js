@@ -36,7 +36,7 @@ function freelance() { // object has curly braces, brackets are arrays
 		// range is the spread of pixels 0 to boundedWidth
 		.range( [ 0, dimensions.boundedWidth ] );
 
-	var xAxisGenerator = d3.axisBottom(xScale);
+	// var xAxisGenerator = d3.axisBottom(xScale);
 
 	var yScale = d3.scaleBand()
 		.range( [ 0, dimensions.boundedHeight ] )
@@ -74,11 +74,10 @@ function freelance() { // object has curly braces, brackets are arrays
 				// method is the same as function but used for back to back
 			// * Below was original statement but plot went to far to edge
 				// xScale.domain( [ 0, d3.max( data, d => d.percent ) ] );
-			// ! This isn't quite right either. Need to go to 35% but keep increments from original statement above
+			// * Adjust the scale manually but update the number of ticks generated
 				xScale.domain( [ 0, 0.35 ] ); 
 
 				// accessor is which column of data you want to use
-
 				yScale.domain( data.map( d => d.year ) ); // map method
 
 				var line = freelance.selectAll( "myLine" )
@@ -90,8 +89,26 @@ function freelance() { // object has curly braces, brackets are arrays
 					.attr( "y1", d => yScale( d.year ) + 0.5 )
 					.attr( "y2", d => yScale( d.year ) + 0.5 )
 					.attr( "stroke-width", 1 )
-					.attr( "stroke", "#999999" );
+					.attr( "stroke", "#2d2d2d" );
 
+				// xAxisGenerator.tickSize(0); // IS THIS WORKING?
+
+				var xAxis = freelance.append( "g" )
+					.attr( "class", "x-axis" )
+					.call( d3.axisBottom( xScale )
+						.ticks(12)
+						.tickFormat(d3.format(".0%")) // change to percent
+						.tickSize(-dimensions.boundedHeight, 0, 0))
+						// .tickFormat("") )
+					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` )
+					.attr("stroke-dasharray", "2,2"); 
+					// .call(g => g.select(".domain").remove())// removes the line for axis
+
+				var xAxisText = xAxis.selectAll( "text" )
+					.attr( "class", "axis_text" )
+					.style( "fill", "#2d2d2d" )
+
+					// add the candy after the gridlines are drawn
 				var candy = freelance.selectAll( "circle" )
 					// join the selection of rectangles with data and then modify
 					.data( data )
@@ -102,25 +119,7 @@ function freelance() { // object has curly braces, brackets are arrays
 					.attr( "cx", d => xScale( d.percent ) )
 					.attr( "r", 8 )
 					// .attr("height", yScale.bandwidth())
-					.attr( "fill", "#03c9ec" );
-
-
-				xAxisGenerator.tickSize(-200); // IS THIS WORKING?
-
-				var xAxis = freelance.append( "g" )
-					.attr( "class", "x-axis" )
-					.call( d3.axisBottom( xScale )
-					.tickFormat(d3.format(".0%"))) // change to percent
-				// TODO - NEED TO MODIFY THIS FOR HEIGHT AND GRIDLINES AFTER SCALE IS FIXED
-						// .tickSize(-height, 0, 0)
-						// .tickFormat("") )
-					.attr( "transform", `translate(0, ${dimensions.boundedHeight})` )
-					.call(g => g.select(".domain").remove())// removes the line for axis
-					// .call(g => g.select(gridlines));
-
-				var xAxisText = xAxis.selectAll( "text" )
-					.attr( "class", "axis_text" )
-					.style( "fill", "#2d2d2d" )
+					.attr( "fill", "#47bedb" );
 
 				var yAxis = freelance.append( "g" )
 					.attr( "class", "y-axis" )
