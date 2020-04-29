@@ -1,5 +1,5 @@
 function setup() {
-    let npoyCanvas = createCanvas(600, 400);
+    let npoyCanvas = createCanvas(1072, 1000);
     npoyCanvas.parent('npoy');
     strokeWeight(1);
   }
@@ -14,19 +14,31 @@ function preload() {
   var strokeColor = '#2d2d2d';
   
   function draw() {
-    // stroke('#2d2d2d');
-    line(1072/2, 230, 1072/2, 1000);
-
     text("Female", 465, 200);
     textAlign(RIGHT);
 
     text("Male", 590, 200);
     textAlign(LEFT);
 
+    // stroke('#2d2d2d');
+    // position the top bar
+      line(1072/2-10, 230, 1072/2+10, 230);
+    // position the first segment
+    line(1072/2, 230, 1072/2, 300);
+
+    text("1986", 1072/2-14, 320);
+    textAlign(CENTER);
+
     image(img85, 590, 240);
+// position the second segment
+    line(1072/2, 330, 1072/2, 540);
+    text("1987", 1072/2, 560);
+    textAlign(CENTER);
+
 
     stroke(strokeColor);
-    line(1072/2-10, 230, 1072/2+10, 230);
+
+
     background()
 
   }

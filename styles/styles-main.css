@@ -521,6 +521,279 @@ span:hover+.dinfo2 {
     display: block;
 } */
 
+/* ----------------
+NPOY and MPOY timeline of images —————————————————— AHHHHHHHHHHHHH!!!!
+----------------------------------------- */
+
+
+.npoylabels p.label1 {
+    grid-area: label1;
+    text-align: right;
+}
+
+.npoylabels p.label2 {
+    grid-area: label2;
+    text-align: left;
+}
+
+.npoylabels p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.npoylabels {
+    padding-bottom: 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 100px 1fr;
+    grid-template-areas: ". label1 . label2 .";
+}
+
+div.npoy {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 100px 1fr;
+    grid-template-rows: auto;
+    margin: auto;
+    padding-top: 1.5rem;
+    position: relative;
+
+}
+
+div.npoy .years {
+    width: 100px;
+    grid-column-start: 3;
+    align-self: center;
+    position: relative;
+}
+
+div.npoy .years p {
+    font-family: droid-sans-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+div.npoy .years p.first::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #2d2d2d;
+    height: 39px;
+    top: -30px;
+    left: 50%;
+    z-index: 1;
+}
+
+/* div.npoy .years p.first::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #2d2d2d;
+    height: 10px;
+    top: 0%;
+    left: 50%;
+    z-index: 1;
+} */
+
+div.npoy .years p::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #2d2d2d;
+    height: 40px;
+    top: 78%;
+    left: 50%;
+    z-index: 1;
+}
+
+/* -- position the male winner image */
+div.npoy .winner.right {
+    grid-column-start: 4;
+}
+
+/* position the female winner images */
+div.npoy .winner.left1 {
+    grid-column-start: 2;
+    grid-row-start: 7;
+    justify-self: end;
+}
+
+div.npoy .winner.left2 {
+    grid-column-start: 2;
+    grid-row-start: 11;
+    justify-self: end;
+}
+
+div.npoy .winner.left3 {
+    grid-column-start: 2;
+    grid-row-start: 12;
+    justify-self: end;
+}
+
+div.npoy .winner.left4 {
+    grid-column-start: 2;
+    grid-row-start: 18;
+    justify-self: end;
+}
+
+div.npoy .winner.left3 img {
+    align-items: center;
+}
+
+/* hide the large images */
+a:hover+div.lrg {
+    display: block;
+    align-items: center;
+    /* opacity: 1; */
+}
+
+/* -- position the larger right images */
+div.lrg.right1 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    right: 17%;
+}
+
+/* opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease; */
+
+div.lrg.right2 {
+    display: none;
+    position: absolute;
+    top: 3%;
+    right: 17%;
+}
+
+div.lrg.right3 {
+    display: none;
+    position: absolute;
+    top: 6%;
+    right: 17%;
+}
+
+div.lrg.right4 {
+    display: none;
+    position: absolute;
+    top: 6%;
+    right: 17%;
+}
+
+div.lrg.right5 {
+    display: none;
+    position: absolute;
+    top: 9%;
+    right: 17%;
+}
+
+div.lrg.right6 {
+    display: none;
+    position: absolute;
+    top: 12%;
+    right: 17%;
+}
+
+/* position the larger left image */
+div.lrg.lefta {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 17%;
+}
+
+div.lrg.right7 {
+    display: none;
+    position: absolute;
+    top: 30%;
+    right: 17%;
+}
+
+div.lrg.right8 {
+    display: none;
+    position: absolute;
+    top: 35%;
+    right: 17%;
+}
+
+div.lrg.leftb {
+    display: none;
+    position: absolute;
+    top: 52%;
+    left: 17%;
+}
+
+div.lrg.leftc {
+    display: none;
+    position: absolute;
+    top: 52%;
+    left: 17%;
+}
+
+div.lrg.leftd {
+    display: none;
+    position: absolute;
+    top: 85%;
+    left: 17%;
+}
+
+div.lrg.right9 {
+    display: none;
+    position: absolute;
+    top: 45%;
+    right: 17%;
+}
+
+div.lrg.right10 {
+    display: none;
+    position: absolute;
+    top: 60%;
+    right: 17%;
+}
+
+div.lrg.right11 {
+    display: none;
+    position: absolute;
+    top: 65%;
+    right: 17%;
+}
+
+div.lrg.right12 {
+    display: none;
+    position: absolute;
+    top: 70%;
+    right: 17%;
+}
+
+div.lrg.right13 {
+    display: none;
+    position: absolute;
+    top: 75%;
+    right: 17%;
+}
+
+div.lrg.right14 {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 17%;
+}
+
+div.lrg.right15 {
+    display: none;
+    position: absolute;
+    top: 85%;
+    right: 17%;
+}
+
+
+
+
+
 
 /* ----------------
 CHART STYLES
