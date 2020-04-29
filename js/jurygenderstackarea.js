@@ -1,7 +1,8 @@
 function juryStack() {
 
+
   // set the dimensions and margins of the graph
-  var margin = {top: 10, right: 30, bottom: 30, left: 40},
+  var margin = {top: 25, right: 30, bottom: 30, left: 40},
       width = 500 - margin.left - margin.right,
       height = 393 - margin.top - margin.bottom;
   
@@ -13,10 +14,39 @@ function juryStack() {
     .append("g")
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
-  
+
+    // * Hard code annotations begins here
+
+    // Draw the annotations - hardcoded as a beginner 
+  // Add the label lines
+    var line1 = svg.append("line")
+    .attr("class", "vertLine")
+    .attr("x1", 150)
+    .attr("y1", 0)
+    .attr("x2", 150)
+    .attr("y2", -20)
+    .attr("stroke-width", 0.5)
+    .attr("stroke", "#666");
+
+    var line2 = svg.append("line")
+    .attr("class", "horzLine")
+    .attr("x1", 150)
+    .attr("y1", -20)
+    .attr("x2", 200)
+    .attr("y2", -20)
+    .attr("stroke-width", 0.5)
+    .attr("stroke", "#666");
+
+    // Add text label for missing + unknown data
+    var label = svg.append("text")
+    .attr("class", "naText")
+    .text("Unknown or missing data")
+    .attr("y", -17)
+    .attr("x", "210")
+    .style("fill", "#2d2d2d");
+
   // Parse the Data
   d3.csv("data/judgesGenderArea.csv", function(data) {
-  
   
     //////////
     // GENERAL //
@@ -79,7 +109,7 @@ function juryStack() {
         .attr("y", -20 )
         // .text("# of baby born")
         .attr("text-anchor", "start")
-  
+
   
     //////////
     // CHART //
@@ -168,6 +198,7 @@ function juryStack() {
       var noHighlight = function(d){
         d3.selectAll(".myArea").style("opacity", 1)
       }    
+
       //////////
       // LEGEND //
       //////////
@@ -199,7 +230,7 @@ function juryStack() {
       //     .style("alignment-baseline", "middle")
       //     .on("mouseover", highlight)
       //     .on("mouseleave", noHighlight)
-  
+
   });
   }// end function
   

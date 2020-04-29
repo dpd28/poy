@@ -1,7 +1,6 @@
 /*
 COLORS
 
- #46acaa - Light teal -- this one currently used
 
 FONTS
 font-family: ff-real-text-pro,sans-serif;
@@ -15,6 +14,7 @@ font-style: italic;
 font-family: droid-sans-mono,monospace;
 font-weight: 400;
 font-style: normal;
+
     font-family: adobe-handwriting-tiffany, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -32,6 +32,8 @@ Newest Colors
 #03c9ec
 #2d2d2d
 color: rgb(45, 45, 45);
+
+naText = annotation styles
 
  */
 
@@ -173,7 +175,7 @@ section#intro {
 
 section.chapter {
     grid-template-columns: 1fr;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 /* 
@@ -313,12 +315,6 @@ aside,
     width: 15vw;
     margin-right: -22vw;
     font-size: 1.1rem;
-    /* font-family: zeitung-mono, sans-serif;
-    font-weight: 300;
-    font-style: italic; */
-    /* font-family: adobe-handwriting-frank, sans-serif;
-    font-weight: 400;
-    font-style: normal; */
     font-family: adobe-handwriting-tiffany, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -328,7 +324,6 @@ aside,
 blockquote {
     font-style: italic;
     border-left: 5px solid #03c9ec;
-
     padding-left: 30px;
 }
 
@@ -344,10 +339,10 @@ section#gallery {
     position: relative;
 }
 
-.galItem1 img,
+/* .galItem1 img,
 .galItem2 img {
-    border: 12px solid rgb(9, 9, 9);
-}
+    border: 1px solid red;
+} */
 
 section#gallery .galItem1 {
     justify-self: end;
@@ -390,7 +385,6 @@ div.chart.freelancetotal {
     grid-template-columns: 1fr;
 }
 
-
 /* Style the chart explainers and notes */
 div.chart.jury .chartExplainer,
 div.chart.jury .chartNotes,
@@ -407,7 +401,6 @@ div.chart.freelancetotal .chartNotes {
     grid-column: span 2;
     width: 700px;
     margin: auto;
-    /* -- Is there a grid item way to center horizontally? --*/
 }
 
 /* Modify the chart description */
@@ -422,7 +415,6 @@ div.chart.freelancetotal figure p,
 div.chart.orgmultiples .chartNotes p,
 div.chart.orgmultiples figure p {
     font-size: 0.85rem;
-    /* color: rgb(218, 218, 218); */
     color: rgb(45, 45, 45);
 }
 
@@ -440,10 +432,6 @@ figure h3 {
     line-height: 0.5;
 }
 
-/* figure #orgTotalAwards {
-    padding-bottom: 3rem;
-} */
-
 
 /* ----------------
 Director STYLES
@@ -454,21 +442,29 @@ Director STYLES
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 225px);
+    padding-bottom: 0;
 }
 
 .chart.admin .directors-left,
 .chart.admin .directors-right {
+    position: relative;
     display: grid;
-    grid-gap: 20px;
-    justify-items: center;
+    grid-gap: 5px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 100px);
+    /* grid-template-rows: repeat(2, 125px); */
+}
+
+.chart.admin .directors-left a,
+.chart.admin .directors-right a {
+    display: grid;
 }
 
 .chart.admin .directors-left img,
 .chart.admin .directors-right img {
     width: 115px;
+    border-radius: 50%;
 }
+
 
 .chart.admin .directors-left img {
     justify-self: end;
@@ -479,10 +475,12 @@ Director STYLES
 }
 
 .chart.admin .directors-left div.name {
+    padding-left: 1rem;
     justify-self: start;
 }
 
 .chart.admin .directors-right div.name {
+    padding-right: 1rem;
     justify-self: end;
 }
 
@@ -497,34 +495,58 @@ Director STYLES
     grid-column: span 2;
 }
 
+/* center the rule */
 .chart.admin .directors-left .rule>svg,
 .chart.admin .directors-right .rule>svg {
     display: block;
     margin: auto;
-
 }
 
 /* ----------------
 Directors hover styles - Delete this css version 
 -----------*
-/* ! Need to figure this out - argh - */
-/* 2nd test with hover only */
 
-/* .dinfo2 {
-    background-color: yellow;
-    padding: 20px;
-    display: none;
-    position: absolute;
+/* hide the short directors bio */
+a:hover+div.dinfo {
+    display: block;
+    align-items: center;
 }
 
-span:hover+.dinfo2 {
-    display: block;
-} */
+/* -- position the directors bios in increments - right side */
+div.dinfo.right {
+    width: 200px;
+    display: none;
+    position: absolute;
+    top: 3%;
+    right: 22%;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+}
+
+div.dinfo.left {
+    width: 200px;
+    display: none;
+    position: absolute;
+    top: 3%;
+    left: 22%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(232, 232, 232);
+    padding: 1rem;
+}
+
+div.dinfo.right p,
+div.dinfo.left p {
+    font-size: 0.9rem;
+}
 
 /* ----------------
-NPOY and MPOY timeline of images —————————————————— AHHHHHHHHHHHHH!!!!
+NPOY and (soon) MPOY timeline of images
 ----------------------------------------- */
 
+section#newspaper .chartExplainer {
+    width: 700px;
+    margin: auto;
+}
 
 .npoylabels p.label1 {
     grid-area: label1;
@@ -537,12 +559,16 @@ NPOY and MPOY timeline of images ———————————————�
 }
 
 .npoylabels p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .npoylabels {
+    font-family: droid-sans-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 1rem;
     padding-bottom: 0.7rem;
     display: grid;
     grid-template-columns: 1fr 100px 100px 100px 1fr;
@@ -554,9 +580,11 @@ div.npoy {
     grid-template-columns: 1fr 100px 100px 100px 1fr;
     grid-template-rows: auto;
     margin: auto;
-    padding-top: 1.5rem;
+    padding-top: 0.7rem;
     position: relative;
-
+    font-family: droid-sans-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
 div.npoy .years {
@@ -567,9 +595,6 @@ div.npoy .years {
 }
 
 div.npoy .years p {
-    font-family: droid-sans-mono, monospace;
-    font-weight: 400;
-    font-style: normal;
     text-align: center;
     font-size: 0.7rem;
 }
@@ -601,15 +626,20 @@ div.npoy .years p::after {
     position: absolute;
     width: 1px;
     background: #2d2d2d;
-    height: 40px;
-    top: 78%;
+    height: 48px;
+    top: 79%;
     left: 50%;
     z-index: 1;
 }
 
-/* -- position the male winner image */
+/* -- position the male winner images */
 div.npoy .winner.right {
     grid-column-start: 4;
+}
+
+div.npoy .winner.right img {
+    grid-column-start: 4;
+    padding-top: 10px;
 }
 
 /* position the female winner images */
@@ -648,7 +678,7 @@ a:hover+div.lrg {
     /* opacity: 1; */
 }
 
-/* -- position the larger right images */
+/* -- position the larger right images in increments */
 div.lrg.right1 {
     display: none;
     position: absolute;
@@ -698,7 +728,7 @@ div.lrg.right6 {
     right: 17%;
 }
 
-/* position the larger left image */
+/* position the larger left images in increments */
 div.lrg.lefta {
     display: none;
     position: absolute;
@@ -791,10 +821,6 @@ div.lrg.right15 {
 }
 
 
-
-
-
-
 /* ----------------
 CHART STYLES
 ------------------------------------------ */
@@ -806,11 +832,6 @@ figure .axis_text {
     font-size: 1rem;
     color: #2d2d2d;
 }
-
-/* figure .x_axis,
-figure .y_axis {
-    fill: #eee;
-} */
 
 .x_axis text,
 .y_axis text {
@@ -852,15 +873,14 @@ figure#freelance .x-axis path {
     color: #2d2d2d;
 }
 
-/* .grid line {
-    stroke: lightgrey;
-    stroke-opacity: 0.7;
-    shape-rendering: crispEdges;
+/* -- style the annotation labels and lines --- */
+.naText,
+.genderText {
+    font-size: 0.6rem;
+    font-family: droid-sans-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
 }
-
-.grid path {
-    stroke-width: 0;
-} */
 
 /* ----------------
 FOOTER + METHODOLOGY SECTIONS

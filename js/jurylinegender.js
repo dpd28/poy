@@ -1,6 +1,6 @@
 function juryLineGender() {
   // set the dimensions and margins of the graph
-  var margin = {top: 10, right: 30, bottom: 30, left: 30},
+  var margin = {top: 10, right: 35, bottom: 30, left: 30},
       width = 500 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
   
@@ -14,7 +14,24 @@ function juryLineGender() {
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
   
-  
+      // * Hard code annotations begins here
+
+    // Draw the annotations - hardcoded as a beginner
+  // Add text label for each gender line
+  var male = svg.append("text")
+  .attr("class", "genderText")
+  .text("Male")
+  .attr("y", 55)
+  .attr("x", "440")
+  .style("fill", "#2d2d2d");
+
+  var female = svg.append("text")
+  .attr("class", "genderText")
+  .text("Female")
+  .attr("y", 270)
+  .attr("x", "420")
+  .style("fill", "#2d2d2d");
+
   //Read the data
   d3.csv("data/judgesGenderLine.csv", function(data) {
   

@@ -96,7 +96,7 @@ function freelance() { // object has curly braces, brackets are arrays
 				var xAxis = freelance.append( "g" )
 					.attr( "class", "x-axis" )
 					.call( d3.axisBottom( xScale )
-						.ticks(12)
+						// .ticks(12)
 						.tickFormat(d3.format(".0%")) // change to percent
 						.tickSize(-dimensions.boundedHeight, 0, 0))
 						// .tickFormat("") )
