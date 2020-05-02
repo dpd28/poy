@@ -87,12 +87,31 @@ h4 {
     margin-top: 3rem;
 }
 
+a:link,
+a:visited {
+    color: #03c9ec;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(169, 0, 0);
+}
+
+a span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+
 
 #wrapper {
     width: 1152px;
     margin: auto;
     display: grid;
 }
+
 
 /* ----------------
 STYLE THE HEADER
@@ -170,7 +189,7 @@ STYLE THE SECTIONS
 ------------------------------------------ */
 
 section#intro {
-    margin-bottom: 2.5rem;
+    margin: 2.5rem 0;
 }
 
 section.chapter {
@@ -217,10 +236,12 @@ p.kicker-label {
     font-size: 0.925rem;
 }
 
+
 div.text {
     width: 700px;
     margin: auto;
     padding: 1rem 2.5rem;
+    position: relative;
 }
 
 div.quote {
@@ -271,11 +292,19 @@ Style the Image Captions
 ---- */
 section#gallery .galItem1 figcaption,
 section#gallery .galItem2 figcaption {
-    font-family: adobe-handwriting-tiffany, sans-serif;
+    font-family: droid-sans-mono, monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
+
+/* add a rule above the caption */
+section#gallery .galItem1 figcaption::before,
+section#gallery .galItem2 figcaption::before {
+    content: "-"
+
+}
+
 
 section#gallery .galItem1 figcaption {
     position: absolute;
@@ -296,29 +325,31 @@ section#gallery .galItem2 figcaption {
 }
 
 p.disclaimer {
-    font-family: "Palatino Linotype", serif;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.8rem;
     font-style: italic;
     line-height: 1.5;
     color: #000;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(245, 245, 245);
     padding: 2rem;
     margin-top: 2rem;
+    border: 1px solid rgb(230, 230, 230);
 }
 
-aside,
-.aside {
-    display: inline;
-    float: right;
-    position: relative;
-    width: 15vw;
+/* --- Style and position the side notes --*/
+aside {
+    position: absolute;
+    width: 250px;
+    font-size: 0.75rem;
+    color: #004dac;
+}
+
+aside.left {
+    margin-left: -32vw;
+    top: 60%;
+}
+
+aside.right {
     margin-right: -22vw;
-    font-size: 1.1rem;
-    font-family: adobe-handwriting-tiffany, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 1px;
 }
 
 blockquote {
@@ -632,7 +663,7 @@ div.npoy .years p::after {
     z-index: 1;
 }
 
-/* -- position the male winner images */
+/* -- position the male winner thumbnail images */
 div.npoy .winner.right {
     grid-column-start: 4;
 }
@@ -642,7 +673,7 @@ div.npoy .winner.right img {
     padding-top: 10px;
 }
 
-/* position the female winner images */
+/* position the female winner thumbnail images */
 div.npoy .winner.left1 {
     grid-column-start: 2;
     grid-row-start: 7;
@@ -676,6 +707,10 @@ a:hover+div.lrg {
     display: block;
     align-items: center;
     /* opacity: 1; */
+}
+
+div.lrg p {
+    font-size: 0.7rem;
 }
 
 /* -- position the larger right images in increments */
