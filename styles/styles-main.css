@@ -476,7 +476,8 @@ div.chart.orgs .chartNotes,
 div.chart.orgmultiples .chartExplainer,
 div.chart.orgmultiples .chartNotes,
 div.chart.freelancetotal .chartExplainer,
-div.chart.freelancetotal .chartNotes {
+div.chart.freelancetotal .chartNotes,
+section#newspaper .chartNotes {
     grid-column: span 2;
     width: 700px;
     margin: auto;
@@ -492,7 +493,8 @@ div.chart.freelancegender figure p,
 div.chart.freelancetotal .chartNotes p,
 div.chart.freelancetotal figure p,
 div.chart.orgmultiples .chartNotes p,
-div.chart.orgmultiples figure p {
+div.chart.orgmultiples figure p,
+section#newspaper .chartNotes p {
     font-size: 0.85rem;
     color: rgb(45, 45, 45);
 }
