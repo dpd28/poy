@@ -27,6 +27,10 @@ font-style: normal;
 font-weight: 400;
 font-style: normal;
 Newest Colors
+
+font-family: ff-tisa-web-pro, serif;
+font-weight: 700;
+font-style: normal;
 #ff6e5d
 #a02799
 #03c9ec
@@ -74,12 +78,12 @@ h5 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 
 h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 h4 {
@@ -89,7 +93,8 @@ h4 {
 
 a:link,
 a:visited {
-    color: #03c9ec;
+    /* color: #1792aa; */
+    color: #0d6ba5;
     text-decoration: none;
 }
 
@@ -104,7 +109,32 @@ a span {
     font-size: 0.85rem;
 }
 
+ul {
+    list-style: none;
+}
 
+ul li span.fas {
+    font-size: 0.75rem;
+}
+
+ul li {
+    margin-bottom: 1rem;
+
+}
+
+strong {
+    font-family: ff-tisa-web-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3 span.w {
+    color: #a02799;
+}
+
+h3 span.m {
+    color: #ff6e5d;
+}
 
 #wrapper {
     width: 1152px;
@@ -138,7 +168,7 @@ section#header {
 
     /* Set a specific height */
     height: 80vh;
-    width: 100vw;
+    width: 100%;
 
     /* Position and center the image to scale nicely on all screens */
     background-position: center center;
@@ -148,19 +178,20 @@ section#header {
 
     /* Add border to the bottom */
     border-bottom: 24px solid #000;
+    display: grid;
 }
 
 /* Place text in the middle of the image */
 section#header #introText {
-    width: 70%;
+    grid-template-columns: 1fr;
+    width: 55%;
     text-align: center;
-    position: relative;
+    position: absolute;
     top: 0%;
-    left: 0%;
+    left: 15%;
     transform: translate(18%, 90%);
     color: white;
-    /* background-color: RGBA(0, 0, 0, 1); */
-    padding: 1rem;
+    /* padding: 1rem; */
     /* margin: auto; */
 }
 
@@ -171,7 +202,7 @@ section#header h1 {
     text-align: center;
     vertical-align: center;
     color: #F5F2F0;
-    margin-top: 0;
+    margin-top: 2rem;
     margin-bottom: 0;
 }
 
@@ -181,7 +212,7 @@ section#header h2 {
     font-style: normal;
     font-size: 1.5rem;
     text-transform: none;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 /* ----------------
@@ -194,7 +225,7 @@ section#intro {
 
 section.chapter {
     grid-template-columns: 1fr;
-    /* margin-top: 3rem; */
+    margin-bottom: 3rem;
 }
 
 /* 
@@ -225,6 +256,9 @@ TEXT SECTIONS + STYLES
 ------------------------------------------ */
 
 p.byline {
+    font-family: ff-real-text-pro, sans-serif;
+    font-weight: 200;
+    font-style: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -256,6 +290,7 @@ div.quote {
     margin-bottom: 75px;
     position: relative;
     left: -150px;
+    line-height: 1.3;
 }
 
 
@@ -279,7 +314,7 @@ div.quote p span {
 div.quote p.attribution {
     text-transform: none;
     letter-spacing: 0px;
-    text-align: right;
+    /* text-align: right; */
     font-size: 0.9rem;
     margin-top: 1rem;
     font-family: ff-real-text-pro, sans-serif;
@@ -301,8 +336,10 @@ section#gallery .galItem2 figcaption {
 /* add a rule above the caption */
 section#gallery .galItem1 figcaption::before,
 section#gallery .galItem2 figcaption::before {
-    content: "-"
-
+    content: "——";
+    width: 175px;
+    display: block;
+    color: #000;
 }
 
 
@@ -324,8 +361,14 @@ section#gallery .galItem2 figcaption {
     width: 175px;
 }
 
+/* section#gallery .galItem1 figcaption span.credit,
+section#gallery .galItem2 figcaption span.credit {
+    letter-spacing: 1px;
+} */
+
+
 p.disclaimer {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     font-style: italic;
     line-height: 1.5;
     color: #000;
@@ -403,6 +446,11 @@ div.chart.freelance figure#freelancegenderline,
 div.chart.freelance figure#freelancegenderstack {
     width: 530px;
 }
+
+/* Small multiples */
+/* div.chart.orgmultiples figure#orgAwardsGender {
+    padding-top: 3rem;
+} */
 
 div.chart.jury,
 div.chart.photogs,
@@ -573,6 +621,9 @@ div.dinfo.left p {
 /* ----------------
 NPOY and (soon) MPOY timeline of images
 ----------------------------------------- */
+section#newspaper {
+    padding-bottom: 9rem;
+}
 
 section#newspaper .chartExplainer {
     width: 700px;
