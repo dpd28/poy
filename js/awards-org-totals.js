@@ -1,8 +1,8 @@
 function orgTotals() { // object has curly braces, brackets are arrays
 
 	var dimensions = {
-		width: window.innerWidth * 0.9, // grab the innerwidth and use 90%
-		height: 800,
+		width: window.innerWidth * 0.85, // grab the innerwidth and use 90%
+		height: 900,
 		margin: {
 			top: 20,
 			right: 30,
