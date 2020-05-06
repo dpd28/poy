@@ -66,6 +66,7 @@ function juryLineGender() {
       .attr( "class", "y_axis" )
       .call(d3.axisLeft(y)
       .tickPadding([10]) // moves axis labels away from ticks and lines
+      .ticks(7)
       .tickSize("0") // remove ticks
       .tickFormat(d3.format("0"))) // change 7.0 to whole numbers
       .call(g => g.select(".domain").remove()); // removes the line for axis
