@@ -12,10 +12,6 @@ font-family: ff-real-text-pro,sans-serif;
 font-weight: 200;
 font-style: normal;
 
-font-family: ff-real-text-pro,sans-serif;
-font-weight: 200;
-font-style: italic;
-
 font-family: droid-sans-mono,monospace;
 font-weight: 400;
 font-style: normal;
@@ -194,7 +190,7 @@ section#intro {
 
 section.chapter {
     grid-template-columns: 1fr;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* 
@@ -370,6 +366,24 @@ section#gallery {
     position: relative;
 }
 
+section#gallery.six {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+    width: 82%;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+section#gallery.six figure {
+    margin: 0;
+}
+
+section#gallery.six figure figcaption {
+    font-size: 0.95rem;
+    font-family: ff-real-text-pro, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
 
 section#gallery .galItem1 {
     display: grid;
@@ -450,8 +464,11 @@ div.chart.freelancetotal figure p,
 div.chart.orgmultiples .chartNotes p,
 div.chart.orgmultiples figure p,
 section#newspaper .chartNotes p {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: rgb(45, 45, 45);
+    font-family: ff-real-text-pro, sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 /* -- May not be using this. Check HTML --*/
