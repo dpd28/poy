@@ -193,21 +193,6 @@ section.chapter {
     margin-bottom: 1rem;
 }
 
-/* 
-section.chapter:before {
-    /* background-image: url("/images/1x/male.png");
-    content: "--";
-    display: block;
-    height: 50px;
-    pointer-events: none;
-    background-position-x: 50%;
-    background-repeat: no-repeat;
-    background-size: 10%;
-    margin: 0 auto;
-    margin-bottom: 0px;
-    width: 25%;
-} */
-
 svg#gendericns {
     display: block;
     width: 100%;
@@ -220,12 +205,24 @@ svg#gendericns {
 TEXT SECTIONS + STYLES
 ------------------------------------------ */
 
-p.byline {
+/* -- Style the footnotes -- */
+sup {
+    font-size: 0.7rem;
+}
+
+p.byline,
+p.scroll {
     font-family: ff-real-text-pro, sans-serif;
     font-weight: 200;
     font-style: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+p.scroll {
+    font-size: 0.75rem;
+    padding-top: 5rem;
+    margin-bottom: 0;
 }
 
 p.kicker-label {
@@ -951,10 +948,42 @@ footer {
     padding: 1rem 0 1rem 0;
     margin-top: 5rem;
     margin-bottom: 3rem;
+    width: 60%;
+    margin: auto;
+}
+
+footer h4 {
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
 
 footer div.methodology p {
     font-size: 0.7em;
     /* color: rgb(201, 201, 201); */
     color: rgb(45, 45, 45);
+}
+
+/* ---------------
+From @bertobox via GitHub
+https://github.com/bertobox/CSS-for-APA-Style-references
+Thank you!
+--------------- */
+
+footer .methodology ul.apa-ref {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+footer .methodology>ul.apa-ref li {
+    list-style-type: none;
+    font-size: 0.7em;
+
+}
+
+footer .methodology>ul.apa-ref li {
+    margin-left: 2em;
+    text-indent: -2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
