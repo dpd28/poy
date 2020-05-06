@@ -592,6 +592,11 @@ div.dinfo.left p {
     font-size: 0.9rem;
 }
 
+div.dinfo.left>p span.position,
+div.dinfo.right>p span.position {
+    font-weight: 700;
+}
+
 /* ----------------
 NPOY and (soon) MPOY timeline of images
 ----------------------------------------- */
