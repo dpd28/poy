@@ -680,17 +680,6 @@ div.npoy .years p.first::before {
     z-index: 1;
 }
 
-/* div.npoy .years p.first::after {
-    content: '';
-    position: absolute;
-    width: 1px;
-    background: #2d2d2d;
-    height: 10px;
-    top: 0%;
-    left: 50%;
-    z-index: 1;
-} */
-
 div.npoy .years p::after {
     content: '';
     position: absolute;
