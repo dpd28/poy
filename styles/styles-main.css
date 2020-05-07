@@ -205,6 +205,17 @@ svg#gendericns {
 TEXT SECTIONS + STYLES
 ------------------------------------------ */
 
+section#intro .text p.drop:first-letter {
+    font-family: ff-real-headline-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 7.1rem;
+    float: left;
+    margin: 10px 8px 0px 0px;
+    line-height: 0.7;
+    color: #111111;
+}
+
 /* -- Style the footnotes -- */
 sup {
     font-size: 0.7rem;
