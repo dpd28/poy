@@ -526,7 +526,6 @@ Director STYLES
     border-radius: 50%;
 }
 
-
 .chart.admin .directors-left img {
     justify-self: end;
 }
@@ -538,11 +537,13 @@ Director STYLES
 .chart.admin .directors-left div.name {
     padding-left: 1rem;
     justify-self: start;
+    text-align: left;
 }
 
 .chart.admin .directors-right div.name {
     padding-right: 1rem;
     justify-self: end;
+    text-align: right;
 }
 
 .chart.admin .directors-left .name>p,
@@ -878,6 +879,7 @@ div.lrg.right15 {
     right: 17%;
 }
 
+/* ---------------- END NPOY CHART */
 
 /* ----------------
 CHART STYLES
@@ -887,10 +889,11 @@ figure .axis_text {
     font-family: droid-sans-mono, monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 0.965rem;
+    font-size: 0.825rem;
     color: #2d2d2d;
 }
 
+/* style the x and y axis labels — award totals + freelance totals charts */
 .x_axis text,
 .y_axis text {
     font-family: droid-sans-mono, monospace;
@@ -898,7 +901,7 @@ figure .axis_text {
 }
 
 /* ----------------
-Style the gridlines
+Style the gridlines — award and freelance totals charts
 ---------------- */
 .x_axis line,
 .y_axis line,
@@ -921,7 +924,6 @@ figure#orgTotalAwards .x_axis path,
 figure#freelance .x-axis path {
     stroke-width: 0;
 }
-
 
 .xlabel,
 .ylabel {
